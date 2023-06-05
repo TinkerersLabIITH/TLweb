@@ -78,7 +78,7 @@ const Homestyled = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 624px;
+    /* height: 624px; */
   }
 
   picture{
