@@ -2,11 +2,6 @@ import React from 'react'
 import styled from "styled-components";
 
 const Team = () => {
-  const data = {
-    title: "Our Team",
-    image: "./images/Team.svg"
-  };
-
   return (
     <TeamWrapper>
       <div className="container grid grid-two-column">
