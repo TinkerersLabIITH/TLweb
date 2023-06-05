@@ -1,6 +1,6 @@
 # Tinkerers' Lab IITH Website
 ---
-Source code for the website of Tinkerers' Lab IIT Hyderabad made with ReactJS using Vite and Tailwind CSS for the styling.
+Source code for the website of Tinkerers' Lab IIT Hyderabad made with ReactJS using Vite.
 
 ## Getting Started
 ---
