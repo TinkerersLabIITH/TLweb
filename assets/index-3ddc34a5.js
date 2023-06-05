@@ -156,16 +156,16 @@ Error generating stack: `+o.message+`
 
   .section-hero-image{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
   }
 
   picture{
-    text-align: center;
+    text-align: end;
   }
 
   .hero-img{
-    max-width: 80%;
+    width: 100%;
   }
 
 
