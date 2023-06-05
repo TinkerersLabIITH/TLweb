@@ -776,7 +776,6 @@
 <defs>
 <filter id="filter0_f_17_272" x="0" y="0" width="771" height="762" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_17_272"/>
 </filter>
 <clipPath id="clip0_17_272">
