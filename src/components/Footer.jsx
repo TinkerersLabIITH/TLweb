@@ -14,7 +14,7 @@ const Footer = () => {
           <div >IIT Hyderabad</div>
         </div>
       </div>
-      <div className="tagline">Think Thinker Transform</div>
+      <div className="tagline">Think Thinker Transform.</div>
       </div>
       <footer>
         <div className="container grid grid-three-column">
