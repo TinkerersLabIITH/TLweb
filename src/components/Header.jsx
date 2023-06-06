@@ -9,7 +9,7 @@ const Header = () => {
             <div className="header-left">
                 <img src="./images/Logo_black.svg" alt="logo" className='logo' />
                 <div className="header-name">
-                    <div >Thinkerers' Lab</div>
+                    <div >Tinkerers' Lab</div>
                     <div >IIT Hyderabad</div>
                 </div>
             </div>
