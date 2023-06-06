@@ -780,7 +780,7 @@ Error generating stack: `+o.message+`
     }
     
 }
-`,Cg=()=>g.jsxs(Eg,{children:[g.jsx("div",{className:"gradient"}),g.jsxs("div",{className:"header-left",children:[g.jsx("img",{src:"./images/Logo_black.svg",alt:"logo",className:"logo"}),g.jsxs("div",{className:"header-name",children:[g.jsx("div",{children:"Thinkerers' Lab"}),g.jsx("div",{children:"IIT Hyderabad"})]})]}),g.jsx(Sg,{})]}),Eg=et.header`
+`,Cg=()=>g.jsxs(Eg,{children:[g.jsx("div",{className:"gradient"}),g.jsxs("div",{className:"header-left",children:[g.jsx("img",{src:"./images/Logo_black.svg",alt:"logo",className:"logo"}),g.jsxs("div",{className:"header-name",children:[g.jsx("div",{children:"Tinkerers' Lab"}),g.jsx("div",{children:"IIT Hyderabad"})]})]}),g.jsx(Sg,{})]}),Eg=et.header`
 padding: 0 10rem;
 height: 10rem;
 background-color: ${({theme:e})=>e.colors.white};
