@@ -6,7 +6,8 @@ import Inventory from './pages/Inventory';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import ImageScroll from './components/imagescroll';
 import Footer from './components/Footer';
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./Globalstyle"
@@ -22,12 +23,11 @@ const App = () => {
       media : { mobile : "768px", tab : "1127px"}
     }
   }
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
     <BrowserRouter>
-      <Header />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
@@ -36,7 +36,8 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-      <Footer />
+      <ImageScroll />
+      {/* <Footer /> */}
     </BrowserRouter >
     </ThemeProvider>
   )

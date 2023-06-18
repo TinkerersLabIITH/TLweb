@@ -1,0 +1,32 @@
+{
+    "items": {
+      "elastic": [
+        {
+          "id": 1,
+          "title": "Photoshoots",
+          "imageUrl": "./imagescroll/Imagescroll1.png"
+        },
+        {
+          "id": 2,
+          "title": "Adventure",
+          "imageUrl": "./imagescroll/Imagescroll1.png"
+        },
+        {
+          "id": 3,
+          "title": "Events",
+          "imageUrl": "./imagescroll/Imagescroll1.png"
+        },
+        {
+          "id": 4,
+          "title": "Discovery",
+          "imageUrl": "./imagescroll/Imagescroll1.png"
+        },
+        {
+          "id": 5,
+          "title": "Sports",
+          "imageUrl": "./imagescroll/Imagescroll1.png"
+        }
+      ]
+    }
+  }
+  

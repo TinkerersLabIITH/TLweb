@@ -1,0 +1,37 @@
+/* Start Elastic carousel */
+.container {
+    margin: 10rem 8rem;
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .container h1 {
+    font-size: 35px;
+    color: rgb(120, 117, 117);
+    text-align: center;
+  }
+  
+  
+  .carousWrapper {
+    width: 80%;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 557px;
+    width: 100%;
+    margin: 3rem 6.7rem;
+    padding-left:20rem ;
+  }
+  .title {
+    background-color: rgba(4, 4, 4, 0.228);
+    border-radius: 15px;
+  }
+  .title h3 {
+    padding: 2rem;
+    color: #fff;
+  }
+  /* End Elastic carousel */
+  
