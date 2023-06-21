@@ -134,7 +134,7 @@ const NavItem = styled.li`
   a {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 22px;
     line-height: 20px;
     display: flex;
