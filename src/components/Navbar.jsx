@@ -11,7 +11,14 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Logo><img src="./images/LogoNav.svg" alt="" /></Logo>
+      <Logo>
+        <img src="./images/LogoNav.svg" alt="" />
+      </Logo>
+      <NavIcon onClick={toggleMenu} className={showMenu ? "active" : ""}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </NavIcon>
       <NavMenu className={showMenu ? "active" : ""}>
         <NavList>
           <NavItem>
@@ -34,11 +41,6 @@ const Navbar = () => {
           </NavItem>
         </NavList>
       </NavMenu>
-      <NavIcon onClick={toggleMenu} className={showMenu ? "active" : ""}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </NavIcon>
     </Nav>
   );
 };
@@ -55,50 +57,7 @@ const Nav = styled.nav`
 const Logo = styled.div`
   font-weight: bold;
   font-size: 24px;
-  padding-left:5rem;
-`;
-
-const NavMenu = styled.div`
-  @media (max-width: 768px) {
-    display: none;
-  }
-
-  &.active {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-const NavList = styled.ul`
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-
-const NavItem = styled.li`
-  a {
-    text-decoration: none;
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 20px;
-    color: #333;
-    transition: color 0.3s;
-
-    &:hover,
-    &:active {
-      color: ${({ theme }) => theme.colors.nav_color};
-    }
-  }
+  padding-left: 5rem;
 `;
 
 const NavIcon = styled.div`
@@ -134,5 +93,54 @@ const NavIcon = styled.div`
     div:last-child {
       transform: translateY(-8px) rotate(-45deg);
     }
+  }
+`;
+
+const NavMenu = styled.div`
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(${({ showMenu }) => (showMenu ? "0" : "-100%")});
+    transition: transform 0.3s;
+  }
+`;
+
+const NavList = styled.ul`
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const NavItem = styled.li`
+  a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+
+    transition: color 0.3s;
+    padding: 2vw;
+
+    &:hover,
+    &:active {
+      color: ${({ theme }) => theme.colors.nav_color};
+    }
+    color: #484848;
   }
 `;

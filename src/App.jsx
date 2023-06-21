@@ -36,11 +36,14 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
-      <ImageScroll />
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter >
     </ThemeProvider>
   )
 }
 
 export default App;
+
+
+
+

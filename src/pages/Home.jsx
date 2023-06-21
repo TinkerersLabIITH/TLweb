@@ -1,5 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import WordAnimation from "../components/homeanimate";
+import ImageScroll from "../components/imagescroll"
+
+const words = ["Think", "Tinker", "Transform"];
+const interval = 200; // Delay between each letter
+const typingDelay = 2000; // Delay before erasing starts
+const erasingDelay = 100; // Delay between each erased letter
 
 const Home = () => {
   return (
@@ -13,13 +20,20 @@ const Home = () => {
       {/* <div className="circle5" /> */}
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-xl-6">
             <div className="hero-heading">Tinkerers’ Laboratory</div>
             <div className="hero-tag">IIT Hyderabad</div>
-            <div className="hero-bottom">Think Transform Thinker...</div>
+            <div className="hero-bottom">
+              <WordAnimation
+                words={words}
+                interval={interval}
+                typingDelay={typingDelay}
+                erasingDelay={erasingDelay}
+              />
+            </div>
             <button className="reachus">Reach Us</button>
           </div>
-          <div className="col-lg-6">
+          <div className="col-xl-6">
             <div className="section-hero-image">
               <picture>
                 <img className="pic1" src="./images/Home.svg" alt="image" />
@@ -30,15 +44,17 @@ const Home = () => {
         <div className="row" id="aims">
           <div className="col-lg-12">
             <div className="ouraim">Our Aim</div>
+            <div className="seperator"></div>
             <div className="desp1">
               Here, at Tinkerers' Lab, our aim is to provide you a working space
               with vast ranges of tools in order to bring out the inner tinkerer
               in you
             </div>
           </div>
-          </div>
-          <div className="row" id="aims2">
-          <div className="col-lg-4">
+        </div>
+        <div className="row" id="aims2">
+          <div className="col-lg-4 col-md-6">
+            <div className="cont">
             <div className="box">
               <img src="./images/aim1.svg" alt="Aim1" />
             </div>
@@ -51,8 +67,10 @@ const Home = () => {
                 build and innovate whenever.
               </div>
             </div>
+            </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6">
+            <div className="cont">
             <div className="box">
               <img src="./images/aim2.svg" alt="Aim1" />
             </div>
@@ -60,27 +78,34 @@ const Home = () => {
               <div className="heading">Resources</div>
               <div className="line"></div>
               <div className="desp2">
-              We have a wide range of resources ,from the commonplace Raspberry Pis and Arduinos to CNCs and 3D Printers.
+                We have a wide range of resources ,from the commonplace
+                Raspberry Pis and Arduinos to CNCs and 3D Printers.
               </div>
             </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="box">
-              <img src="./images/aim3.svg" alt="Aim1" />
             </div>
-            <div className="content">
-              <div className="heading">TL Talks</div>
-              <div className="line"></div>
-              <div className="desp2">
-              TL will host talks and sessions with innovators and entrepreneurs to boost the interest in new fields and push boundaries.
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className="cont">
+              <div className="box">
+                <img src="./images/aim3.svg" alt="Aim1" />
+              </div>
+              <div className="content">
+                <div className="heading">TL Talks</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  TL will host talks and sessions with innovators and
+                  entrepreneurs to boost the interest in new fields and push
+                  boundaries.
+                </div>
               </div>
             </div>
             <div className="hand">
               <img src="./images/hand.svg" alt="hand" />
             </div>
           </div>
-          </div>
+        </div>
       </div>
+      <ImageScroll />
     </Homestyled>
   );
 };
@@ -88,12 +113,21 @@ const Home = () => {
 export default Home;
 
 const Homestyled = styled.section`
-  padding: 9rem 5px;
-  #aims2{
-    padding:7rem 23rem;
+  .col-lg-4, .col-md-6 {
+    padding-top: 20px;
   }
-  .hand{
-    padding-left:25rem;
+  .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hand {
+    position:absolute;
+    z-index:3;
+    right:0px;
+  }
+  .separator {
+    border: 3px solid rgba(0, 0, 0, 0.1);
   }
   .desp2 {
     font-family: "Inter";
@@ -104,8 +138,16 @@ const Homestyled = styled.section`
     text-align: center;
 
     color: #001824;
-    padding: 0rem 5rem;
-    padding-bottom: 4rem;
+    padding: 0rem 15vw;
+     margin-bottom: 15vh;
+  }
+  #aims2 , #aims{
+    width:90vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:5vw;
+    position:relative;
   }
   .line {
     margin: 2.5rem 5rem;
@@ -126,9 +168,9 @@ const Homestyled = styled.section`
     background: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 39px;
-    margin-top:-2.5rem;
-    z-index:1;
-    height:35rem;
+    margin-top: -3.5rem;
+    z-index: 1;
+    height: 35rem;
   }
   .box {
     background: #eddaff;
@@ -139,12 +181,11 @@ const Homestyled = styled.section`
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    margin-left:11rem;
-    z-index:2;
-    position:relative;
-  }
-  #aims {
-    margin: 0 25rem;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .desp1 {
     font-family: "Inter";
@@ -155,6 +196,7 @@ const Homestyled = styled.section`
     text-align: center;
 
     color: #001824;
+    margin: 3rem;
     margin-top: 20px;
   }
   .ouraim {
@@ -166,13 +208,12 @@ const Homestyled = styled.section`
     text-align: center;
 
     color: #000000;
+    padding-top: 7vh;
   }
   .reachus {
-    position: absolute;
-    width: 267px;
-    height: 92px;
-    left: 155px;
-    top: 551px;
+    width: 220px;
+    height: 10vh;
+
     background: #6c10c6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 46px;
@@ -191,7 +232,7 @@ const Homestyled = styled.section`
     position: absolute;
     width: 681px;
     height: 669px;
-    left: -75px;
+    left: 0;
     top: -441px;
 
     background: radial-gradient(
@@ -235,7 +276,7 @@ const Homestyled = styled.section`
     left: 8rem;
     top: 60rem;
   }
-  .col-lg-6 {
+  .col-xl-6 {
     text-align: center;
   }
 
@@ -268,17 +309,9 @@ const Homestyled = styled.section`
     left: 78rem;
     top: 28rem;
   }
-
-  .section-hero-data {
-    display: flex;
-    justify-content: center;
-  }
-
   .hero-heading {
-    position: absolute;
-    width: 431px;
-    height: 170px;
-    left: 15rem;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
 
     font-family: "Inter";
     font-style: normal;
@@ -288,10 +321,6 @@ const Homestyled = styled.section`
   }
 
   .hero-tag {
-    position: absolute;
-    left: 15rem;
-    top: 406px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
@@ -300,16 +329,12 @@ const Homestyled = styled.section`
   }
 
   .hero-bottom {
-    position: absolute;
-
-    left: 15rem;
-    top: 485px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
+    padding-bottom: 2rem;
   }
 
   .section-hero-image {
@@ -322,47 +347,46 @@ const Homestyled = styled.section`
   picture {
     text-align: center;
   }
+  @media (min-width:768px){
+    .desp2{
+      padding:0rem 5vw;
+    }
+  }
   @media (max-width: 1200px) {
+    .reachus {
+      font-weight: 700;
+      font-size: 24px;
+      width: 75vw;
+    }
     .pic1 {
       display: none;
     }
 
     .hero-heading {
       text-align: center;
+      font-weight: 700;
+      font-size: 50px;
     }
 
     .hero-tag {
       text-align: center;
+      font-weight: 500;
+      font-size: 30px;
     }
 
     .hero-bottom {
       text-align: center;
     }
     .circle1 {
-      background-color: #6c10c6;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
+      display: none;
     }
 
     .circle2 {
-      position: absolute;
-      background-color: #6c10c6;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      left: 8rem;
-      top: 60rem;
+      display: none;
     }
 
     .circle3 {
-      position: absolute;
-      background-color: #6c10c6;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      left: 12rem;
-      top: 68rem;
+      display: none;
     }
 
     .circle4 {
@@ -372,5 +396,11 @@ const Homestyled = styled.section`
     .circle5 {
       display: none;
     }
+    .ellipse1,
+    .ellipse2 {
+      display: none;
+    }
+   
+    
   }
 `;

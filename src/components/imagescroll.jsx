@@ -24,8 +24,8 @@ export default function ElasticCarousel() {
             <div
               key={item.id}
               className={styles.card}
-              style={{ backgroundImage: `url(${item.imageUrl})` }}
             >
+              <img src={item.imageUrl} alt={item.title} className={styles.backgroundImage} />
               {/* <div className={styles.title}>
                 <h3>{item.title} </h3>
               </div> */}
