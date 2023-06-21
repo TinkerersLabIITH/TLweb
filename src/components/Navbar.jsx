@@ -19,7 +19,7 @@ const Navbar = () => {
         <div></div>
         <div></div>
       </NavIcon>
-      <NavMenu className={showMenu ? "active" : ""}>
+      <NavMenu showMenu={showMenu} className={showMenu ? "active" : ""}>
         <NavList>
           <NavItem>
             <NavLink to="/">Home</NavLink>
@@ -66,7 +66,11 @@ const NavIcon = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
+   position: fixed;
+    top: 4rem;
+    right: 2rem;
     display: flex;
+    z-index: 15;
   }
 
   div {
@@ -102,20 +106,23 @@ const NavMenu = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 65vh;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
     padding: 1rem;
+    transform: ${({ showMenu }) =>(showMenu ? "translateY(0%)" : "translateY(-100%)")};
+    z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(${({ showMenu }) => (showMenu ? "0" : "-100%")});
     transition: transform 0.3s;
-  }
+}
 `;
 
 const NavList = styled.ul`
+@media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem;
+}
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -127,8 +134,8 @@ const NavItem = styled.li`
   a {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: bolder;
+    font-size: 22px;
     line-height: 20px;
     display: flex;
     align-items: center;
