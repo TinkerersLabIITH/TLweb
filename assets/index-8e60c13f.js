@@ -1072,7 +1072,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     top: 0;
     left: 0;
     width: 100%;
-    height: 65vh;
+    height: 100%;
     background-color: #fff;
     padding: 1rem;
     transform: ${({showMenu:e})=>e?"translateY(0%)":"translateY(-100%)"};
