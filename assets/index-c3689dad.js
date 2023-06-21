@@ -1019,7 +1019,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */function Sl(){return Sl=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Sl.apply(this,arguments)}function Wv(e,t){if(e==null)return{};var n={},r=Object.keys(e),i,o;for(o=0;o<r.length;o++)i=r[o],!(t.indexOf(i)>=0)&&(n[i]=e[i]);return n}function ZS(e){return!!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}function JS(e,t){return e.button===0&&(!t||t==="_self")&&!ZS(e)}const eb=["onClick","relative","reloadDocument","replace","state","target","to","preventScrollReset"],tb=["aria-current","caseSensitive","className","end","style","to","children"];function nb(e){let{basename:t,children:n,window:r}=e,i=D.useRef();i.current==null&&(i.current=cS({window:r,v5Compat:!0}));let o=i.current,[l,u]=D.useState({action:o.action,location:o.location});return D.useLayoutEffect(()=>o.listen(u),[o]),D.createElement(GS,{basename:t,children:n,location:l.location,navigationType:l.action,navigator:o})}const rb=typeof window<"u"&&typeof window.document<"u"&&typeof window.document.createElement<"u",ib=/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,ob=D.forwardRef(function(t,n){let{onClick:r,relative:i,reloadDocument:o,replace:l,state:u,target:c,to:f,preventScrollReset:v}=t,g=Wv(t,eb),{basename:m}=D.useContext(Ar),w,x=!1;if(typeof f=="string"&&ib.test(f)&&(w=f,rb))try{let h=new URL(window.location.href),_=f.startsWith("//")?new URL(h.protocol+f):new URL(f),P=yd(_.pathname,m);_.origin===h.origin&&P!=null?f=P+_.search+_.hash:x=!0}catch{}let k=RS(f,{relative:i}),I=sb(f,{replace:l,state:u,target:c,preventScrollReset:v,relative:i});function y(h){r&&r(h),h.defaultPrevented||I(h)}return D.createElement("a",Sl({},g,{href:w||k,onClick:x||o?r:y,ref:n,target:c}))}),Xr=D.forwardRef(function(t,n){let{"aria-current":r="page",caseSensitive:i=!1,className:o="",end:l=!1,style:u,to:c,children:f}=t,v=Wv(t,tb),g=_d(c,{relative:v.relative}),m=$o(),w=D.useContext($v),{navigator:x}=D.useContext(Ar),k=x.encodeLocation?x.encodeLocation(g).pathname:g.pathname,I=m.pathname,y=w&&w.navigation&&w.navigation.location?w.navigation.location.pathname:null;i||(I=I.toLowerCase(),y=y?y.toLowerCase():null,k=k.toLowerCase());let h=I===k||!l&&I.startsWith(k)&&I.charAt(k.length)==="/",_=y!=null&&(y===k||!l&&y.startsWith(k)&&y.charAt(k.length)==="/"),P=h?r:void 0,N;typeof o=="function"?N=o({isActive:h,isPending:_}):N=[o,h?"active":null,_?"pending":null].filter(Boolean).join(" ");let A=typeof u=="function"?u({isActive:h,isPending:_}):u;return D.createElement(ob,Sl({},v,{"aria-current":P,className:N,ref:n,style:A,to:c}),typeof f=="function"?f({isActive:h,isPending:_}):f)});var Th;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmitImpl="useSubmitImpl",e.UseFetcher="useFetcher"})(Th||(Th={}));var Nh;(function(e){e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(Nh||(Nh={}));function sb(e,t){let{target:n,replace:r,state:i,preventScrollReset:o,relative:l}=t===void 0?{}:t,u=DS(),c=$o(),f=_d(e,{relative:l});return D.useCallback(v=>{if(JS(v,n)){v.preventDefault();let g=r!==void 0?r:_l(c)===_l(f);u(e,{replace:g,state:i,preventScrollReset:o,relative:l})}},[c,u,f,r,i,n,e,o,l])}const lb=()=>{const[e,t]=D.useState(!1),n=()=>{t(!e)};return S.jsxs(ab,{children:[S.jsx(ub,{children:S.jsx("img",{src:"./images/LogoNav.svg",alt:""})}),S.jsxs(cb,{onClick:n,className:e?"active":"",children:[S.jsx("div",{}),S.jsx("div",{}),S.jsx("div",{})]}),S.jsx(db,{className:e?"active":"",children:S.jsxs(fb,{children:[S.jsx(Gr,{children:S.jsx(Xr,{to:"/",children:"Home"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/team",children:"Team"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/events",children:"Events"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/inventory",children:"Inventory"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/projects",children:"Projects"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/contacts",children:"Contacts"})})]})})]})},ab=Le.nav`
+ */function Sl(){return Sl=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},Sl.apply(this,arguments)}function Wv(e,t){if(e==null)return{};var n={},r=Object.keys(e),i,o;for(o=0;o<r.length;o++)i=r[o],!(t.indexOf(i)>=0)&&(n[i]=e[i]);return n}function ZS(e){return!!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}function JS(e,t){return e.button===0&&(!t||t==="_self")&&!ZS(e)}const eb=["onClick","relative","reloadDocument","replace","state","target","to","preventScrollReset"],tb=["aria-current","caseSensitive","className","end","style","to","children"];function nb(e){let{basename:t,children:n,window:r}=e,i=D.useRef();i.current==null&&(i.current=cS({window:r,v5Compat:!0}));let o=i.current,[l,u]=D.useState({action:o.action,location:o.location});return D.useLayoutEffect(()=>o.listen(u),[o]),D.createElement(GS,{basename:t,children:n,location:l.location,navigationType:l.action,navigator:o})}const rb=typeof window<"u"&&typeof window.document<"u"&&typeof window.document.createElement<"u",ib=/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,ob=D.forwardRef(function(t,n){let{onClick:r,relative:i,reloadDocument:o,replace:l,state:u,target:c,to:f,preventScrollReset:v}=t,g=Wv(t,eb),{basename:m}=D.useContext(Ar),w,x=!1;if(typeof f=="string"&&ib.test(f)&&(w=f,rb))try{let h=new URL(window.location.href),_=f.startsWith("//")?new URL(h.protocol+f):new URL(f),P=yd(_.pathname,m);_.origin===h.origin&&P!=null?f=P+_.search+_.hash:x=!0}catch{}let k=RS(f,{relative:i}),I=sb(f,{replace:l,state:u,target:c,preventScrollReset:v,relative:i});function y(h){r&&r(h),h.defaultPrevented||I(h)}return D.createElement("a",Sl({},g,{href:w||k,onClick:x||o?r:y,ref:n,target:c}))}),Xr=D.forwardRef(function(t,n){let{"aria-current":r="page",caseSensitive:i=!1,className:o="",end:l=!1,style:u,to:c,children:f}=t,v=Wv(t,tb),g=_d(c,{relative:v.relative}),m=$o(),w=D.useContext($v),{navigator:x}=D.useContext(Ar),k=x.encodeLocation?x.encodeLocation(g).pathname:g.pathname,I=m.pathname,y=w&&w.navigation&&w.navigation.location?w.navigation.location.pathname:null;i||(I=I.toLowerCase(),y=y?y.toLowerCase():null,k=k.toLowerCase());let h=I===k||!l&&I.startsWith(k)&&I.charAt(k.length)==="/",_=y!=null&&(y===k||!l&&y.startsWith(k)&&y.charAt(k.length)==="/"),P=h?r:void 0,N;typeof o=="function"?N=o({isActive:h,isPending:_}):N=[o,h?"active":null,_?"pending":null].filter(Boolean).join(" ");let A=typeof u=="function"?u({isActive:h,isPending:_}):u;return D.createElement(ob,Sl({},v,{"aria-current":P,className:N,ref:n,style:A,to:c}),typeof f=="function"?f({isActive:h,isPending:_}):f)});var Th;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmitImpl="useSubmitImpl",e.UseFetcher="useFetcher"})(Th||(Th={}));var Nh;(function(e){e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(Nh||(Nh={}));function sb(e,t){let{target:n,replace:r,state:i,preventScrollReset:o,relative:l}=t===void 0?{}:t,u=DS(),c=$o(),f=_d(e,{relative:l});return D.useCallback(v=>{if(JS(v,n)){v.preventDefault();let g=r!==void 0?r:_l(c)===_l(f);u(e,{replace:g,state:i,preventScrollReset:o,relative:l})}},[c,u,f,r,i,n,e,o,l])}const lb=()=>{const[e,t]=D.useState(!1),n=()=>{t(!e)};return S.jsxs(ab,{children:[S.jsx(ub,{children:S.jsx("img",{src:"./images/LogoNav.svg",alt:""})}),S.jsxs(cb,{onClick:n,className:e?"active":"",children:[S.jsx("div",{}),S.jsx("div",{}),S.jsx("div",{})]}),S.jsx(db,{showMenu:e,className:e?"active":"",children:S.jsxs(fb,{children:[S.jsx(Gr,{children:S.jsx(Xr,{to:"/",children:"Home"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/team",children:"Team"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/events",children:"Events"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/inventory",children:"Inventory"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/projects",children:"Projects"})}),S.jsx(Gr,{children:S.jsx(Xr,{to:"/contacts",children:"Contacts"})})]})})]})},ab=Le.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1034,7 +1034,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   cursor: pointer;
 
   @media (max-width: 768px) {
+   position: fixed;
+    top: 4rem;
+    right: 2rem;
     display: flex;
+    z-index: 15;
   }
 
   div {
@@ -1068,18 +1072,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 65vh;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
     padding: 1rem;
+    transform: ${({showMenu:e})=>e?"translateY(0%)":"translateY(-100%)"};
+    z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(${({showMenu:e})=>e?"0":"-100%"});
     transition: transform 0.3s;
-  }
+}
 `,fb=Le.ul`
+@media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem;
+}
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -1089,8 +1096,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   a {
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: bolder;
+    font-size: 22px;
     line-height: 20px;
     display: flex;
     align-items: center;
