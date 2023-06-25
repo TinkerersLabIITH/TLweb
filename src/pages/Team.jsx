@@ -17,8 +17,26 @@ const Team = () => {
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="./images/Team.svg" alt="image" className='hero-img'/>
+            <img src="./images/Team.svg" alt="image" className='hero-img' />
           </picture>
+        </div>
+      </div>
+      <div className="convener">
+        <div className="position">Convener</div>
+        <picture>
+          <img src="./images/samyak.png" alt="pic" />
+        </picture>
+      </div>
+      <div className="secretaries">
+        <div className="position">Secretaries</div>
+        <div className='img-secs'>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
+        <picture><img src="./images/samyak.png" alt="pic" /></picture>
         </div>
       </div>
     </TeamWrapper>
@@ -140,6 +158,48 @@ const TeamWrapper = styled.section`
 
   .hero-img{
     width: 100%;
+  }
+
+  .convener{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+    .position{
+      padding: 10rem 0;
+      color: #000;
+      text-align: center;
+      font-size: 48px;
+      font-family: Inter;
+      font-weight: 700;
+    }
+
+    img{
+      width: 262.292px;
+      height: 280px;
+    }
+  }
+
+  .secretaries{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+    .position{
+      padding: 7rem 0;
+      color: #000;
+      text-align: center;
+      font-size: 48px;
+      font-family: Inter;
+      font-weight: 700;
+    }
+
+    .img-secs{
+      display: flex;
+      flex-direction: row;
+    }
   }
 
 `;
