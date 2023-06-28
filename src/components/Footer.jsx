@@ -1,5 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
   return (
@@ -32,7 +34,20 @@ const Footer = () => {
                   <picture><img src="./images/img3.svg" alt="github" /></picture>
                 </div>
           </div>
-          <div className="contacts"></div>
+          <div className="contacts">
+            <div>
+            <PhoneIcon/>
+            +91 97992 98098
+            </div>
+            <div>
+              <EmailIcon/>
+              tl@iith.ac.in
+            </div>
+            <div>
+              <EmailIcon/>
+              ms20btech11019@iith.ac.in
+            </div>
+          </div>
         </div>
       </footer>
     </MainFooter>
