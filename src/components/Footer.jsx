@@ -24,7 +24,13 @@ const Footer = () => {
           </div>
           <div className="handels">
                 <div className="bold"><b>Reach us</b></div>
-
+                <div>
+                  <picture><img src="./images/img1.svg" alt="facebook" /></picture>
+                  <picture><img src="./images/img5.svg" alt="instagram" /></picture>
+                  <picture><img src="./images/img2.svg" alt="linkedin" /></picture>
+                  <picture><img src="./images/img4.svg" alt="discord" /></picture>
+                  <picture><img src="./images/img3.svg" alt="github" /></picture>
+                </div>
           </div>
           <div className="contacts"></div>
         </div>

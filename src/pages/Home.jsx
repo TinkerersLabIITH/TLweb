@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import WordAnimation from "../components/homeanimate";
 import ImageScroll from "../components/imagescroll"
+import { NavLink } from "react-router-dom";
 
 const words = ["Think", "Tinker", "Transform"];
 const interval = 200; // Delay between each letter
@@ -31,7 +32,9 @@ const Home = () => {
                 erasingDelay={erasingDelay}
               />
             </div>
-            <button className="reachus">Reach Us</button>
+            <button className="reachus">
+            <NavLink to="/contacts">Reach Us</NavLink>
+            </button>
           </div>
           <div className="col-xl-6">
             <div className="section-hero-image">
@@ -213,6 +216,9 @@ const Homestyled = styled.section`
   .reachus {
     width: 220px;
     height: 10vh;
+    a{
+      color: #fff;
+    }
 
     background: #6c10c6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -329,6 +335,8 @@ const Homestyled = styled.section`
   }
 
   .hero-bottom {
+    padding: 50px;
+    height: 150px;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
