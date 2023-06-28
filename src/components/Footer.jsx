@@ -28,11 +28,11 @@ const Footer = () => {
           <div className="handels">
             <div className="bold"><b>Reach us</b></div>
             <div className='accounts'>
-              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img1.svg" alt="facebook" /></NavLink></picture>
-              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img5.svg" alt="instagram" /></NavLink></picture>
-              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img2.svg" alt="linkedin" /></NavLink></picture>
-              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img4.svg" alt="discord" /></NavLink></picture>
-              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img3.svg" alt="github" /></NavLink></picture>
+              <picture><NavLink to="https://www.facebook.com/tl.iith/" target='_blank'><img src="./images/img1.svg" alt="facebook" /></NavLink></picture>
+              <picture><NavLink to="https://www.instagram.com/tinkererslab_iith" target='_blank'><img src="./images/img5.svg" alt="instagram" /></NavLink></picture>
+              <picture><NavLink to="https://www.linkedin.com/in/tinkerers-lab-iith/" target='_blank'><img src="./images/img2.svg" alt="linkedin" /></NavLink></picture>
+              <picture><NavLink to="https://discord.gg/cZFaRjyw" target='_blank'><img src="./images/img4.svg" alt="discord" /></NavLink></picture>
+              <picture><NavLink to="https://github.com/TinkerersLabIITH" target='_blank'><img src="./images/img3.svg" alt="github" /></NavLink></picture>
             </div>
           </div>
           <div className="contacts">
