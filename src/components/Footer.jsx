@@ -2,21 +2,22 @@ import React from 'react'
 import { styled } from 'styled-components';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <MainFooter>
       <div className="top">
 
-      <div className="subfooter">
-        <img src="./images/Vector.svg" alt="logo" />
-        <div className="line"></div>
-        <div className="names">
-          <div >Tinkerers' Lab</div>
-          <div >IIT Hyderabad</div>
+        <div className="subfooter">
+          <img src="./images/Vector.svg" alt="logo" />
+          <div className="line"></div>
+          <div className="names">
+            <div >Tinkerers' Lab</div>
+            <div >IIT Hyderabad</div>
+          </div>
         </div>
-      </div>
-      <div className="tagline">Think Thinker Transform.</div>
+        <div className="tagline">Think Thinker Transform.</div>
       </div>
       <footer>
         <div className="container grid grid-three-column">
@@ -25,35 +26,37 @@ const Footer = () => {
             <div ><p>Beside Aryabatta Hostel. Indian Institute of Technology Hyderabad, Kandi, Sangareddy, Telangana, India.</p></div>
           </div>
           <div className="handels">
-                <div className="bold"><b>Reach us</b></div>
-                <div>
-                  <picture><img src="./images/img1.svg" alt="facebook" /></picture>
-                  <picture><img src="./images/img5.svg" alt="instagram" /></picture>
-                  <picture><img src="./images/img2.svg" alt="linkedin" /></picture>
-                  <picture><img src="./images/img4.svg" alt="discord" /></picture>
-                  <picture><img src="./images/img3.svg" alt="github" /></picture>
-                </div>
+            <div className="bold"><b>Reach us</b></div>
+            <div className='accounts'>
+              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img1.svg" alt="facebook" /></NavLink></picture>
+              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img5.svg" alt="instagram" /></NavLink></picture>
+              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img2.svg" alt="linkedin" /></NavLink></picture>
+              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img4.svg" alt="discord" /></NavLink></picture>
+              <picture><NavLink to="https://github.com/White-Devil09" target='_blank'><img src="./images/img3.svg" alt="github" /></NavLink></picture>
+            </div>
           </div>
           <div className="contacts">
             <div>
-            <PhoneIcon/>
-            +91 97992 98098
+              <PhoneIcon />
+              +91 97992 98098
             </div>
             <div>
-              <EmailIcon/>
+              <EmailIcon />
               tl@iith.ac.in
             </div>
             <div>
-              <EmailIcon/>
+              <EmailIcon />
               ms20btech11019@iith.ac.in
             </div>
           </div>
+        </div>
+        <div className="copyright">
+          Copyright © 2023 All Rights Reserved | IIT Hyderabad
         </div>
       </footer>
     </MainFooter>
   )
 }
-
 export default Footer;
 
 const MainFooter = styled.footer`
@@ -104,7 +107,49 @@ const MainFooter = styled.footer`
   }
 
   footer{
-    padding: 14rem 0 9rem 0;
-    /* background-color: red; */
+    padding-top: 5rem ;
+  }
+
+  .copyright{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    color: #6C10C6;
+    font-size: 20px;
+    font-family: Inter;
+    text-align: center;
+  }
+
+  .location{
+    color: #6C10C6;
+    font-size: 20px;
+    font-family: Inter;
+    margin: 0 6rem;
+  }
+
+  .handels{
+    color: #6C10C6;
+    font-size: 20px;
+    font-family: Inter;
+    text-align: center;
+
+    .accounts{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2.5rem;
+      gap: 2rem;
+    }
+  }
+
+  .contacts{
+    color: #6C10C6;
+    font-size: 20px;
+    font-family: Inter;
+
+    svg{
+      font-size: 25px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
   }
 `;
