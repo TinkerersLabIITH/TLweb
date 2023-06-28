@@ -145,11 +145,24 @@ const MainFooter = styled.footer`
     color: #6C10C6;
     font-size: 20px;
     font-family: Inter;
+    padding-left: 6.5rem;
 
     svg{
       font-size: 25px;
       margin-right: 20px;
       margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 980px) {
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3.2rem;
+      
+      .grid{
+      }
     }
   }
 `;
