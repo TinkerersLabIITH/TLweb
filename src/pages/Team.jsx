@@ -481,6 +481,8 @@ const TeamWrapper = styled.section`
         font-weight: 500;
         font-size: 30px;
         margin-left:-120px;
+        width:auto;
+        height:auto;
       }
 
       .hero-bottom {
