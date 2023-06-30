@@ -1301,7 +1301,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         display: flex;
         flex-direction: column;
         height: 180vh;
-        padding: 0;
+        padding-top: 5rem;
       }
 
       .map-iframe {
