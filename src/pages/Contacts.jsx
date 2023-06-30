@@ -1,5 +1,5 @@
 import { FunctionsRounded } from '@mui/icons-material';
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react';
 import styled from "styled-components";
 import WordAnimation from "../components/homeanimate";
@@ -34,6 +34,8 @@ const Contacts = () => {
 
   }
 
+  const formRef = useRef(null)
+
   function handleSubmit(event) {
     const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
     event.preventDefault()
@@ -43,7 +45,11 @@ const Contacts = () => {
       message: message.message ? false : true,
       send: message.name && message.email && re.test(message.email) && message.message ? true : false
     }))
-    warn.send && console.log(message, warn.name)
+    warn.send && fetch('https://script.google.com/macros/s/AKfycbyRURVOmeH0Q5CIo7t1aE8aqvGFYDlNL94Xn658URWMfVWcT3_pc-xCSVIMTj_aLDZN/exec',
+      {
+        method: "POST",
+        body: new FormData(formRef.current),
+      }).then(res => console.log(res.status)).catch(err => console.log(err))
   }
   return (
     <ContactsWrapper >
@@ -89,7 +95,7 @@ const Contacts = () => {
         </div>
         <div className='section-message'>
           <h4>Message Us</h4>
-          <form className='section-message-box' onSubmit={handleSubmit} noValidate>
+          <form className='section-message-box' onSubmit={handleSubmit} noValidate ref={formRef}>
             <div className='section-message-box-wraps'>
               <label htmlFor='message-name'>Name</label>
               <input
