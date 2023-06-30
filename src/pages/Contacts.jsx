@@ -132,6 +132,7 @@ const ContactsWrapper = styled.section`
     height: 669px;
     left: 0;
     top: -441px;
+    z-index: -1;
 
     background: radial-gradient(
         40.83% 40.83% at 50% 50%,
@@ -147,6 +148,7 @@ const ContactsWrapper = styled.section`
     height: 794px;
     left: -363px;
     top: -349px;
+    z-index: -1;
 
     background: radial-gradient(
         40.83% 40.83% at 50% 50%,
@@ -206,19 +208,12 @@ const ContactsWrapper = styled.section`
     top: 28rem;
   }
 
-  .section-hero-data{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   .hero-heading{
     position: absolute;
     /* width: 431px; */
     /* height: 170px; */
     left: 15rem;
     top: 310px;
-      
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -391,11 +386,53 @@ const ContactsWrapper = styled.section`
     margin-bottom: -0.7rem;
     font-size: 1.15rem;
   }
-
-  @media (max-width: 1200px) {
-    .section-map-message {
-      padding:0 7rem;
+  @media (max-width: 1400px){
+    .circle4,.circle5 {
+      display: none;
     }
+  }
+  @media (max-width: 1200px) {
+    .section-hero-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2vh;
+      height: max-content;
+      width: 100vw;
+      margin-top: -15vh;
+    }
+
+    .hero-heading {
+      display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;width: auto;
+    height: auto;
+    font-size: 80px;
+    position: unset;
+}
+
+    .hero-tag {
+    font-family: 'Inter';
+    font-style: normal;
+    width: auto;
+    height: auto;
+    position: unset;
+
+    }
+
+    .hero-bottom {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    width: auto;
+    height: auto;
+    position: unset;
+
+    } 
 
     .section-hero-image {
       display: none;
@@ -408,20 +445,32 @@ const ContactsWrapper = styled.section`
       display: none;
     }
 
+    .section-map-message {
+      height: 100vh;
+    }
     .section-map {
-      margin: 5rem 0 0 0;
+      margin: 23vh 0 0 0;
+      
     }
 
     .section-message {
       margin: 0;
+      margin-top: 10vh;
+      width: 100%;
+    }
+
+    .section-message-box {
+      width: 100%;
     }
   }
 
     @media (max-width:768px){
+
       .section-map-message {
         display: flex;
         flex-direction: column;
         height: 180vh;
+        padding: 0;
       }
 
       .map-iframe {
