@@ -962,7 +962,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   .ellipse2 {
     position: absolute;
-    width: 681px;
     height: 669px;
     left: 0;
     top: -441px;
@@ -978,7 +977,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   .ellipse1 {
     position: absolute;
-    width: 808px;
+    width: 700px;
     height: 794px;
     left: -363px;
     top: -349px;
@@ -1057,8 +1056,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   .hero-tag{
     position: absolute;
-    width: 1008px;
-    height: 580px;
+    width: auto;
+    height: auto;
     left: 15rem;
     top: 406px;
 
@@ -1071,10 +1070,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   .hero-bottom{
     position: absolute;
-    width: 1008px;
-    height: 525px;
+    width: auto;
+    height: auto;
     left: 32rem;
     top: 485px;
+
       
     font-family: 'Inter';
     font-style: normal;
@@ -1232,9 +1232,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       align-items: center;
       justify-content: center;
       gap: 2vh;
-      height: max-content;
       width: 100vw;
-      margin-top: -15vh;
     }
 
     .hero-heading {
@@ -1263,16 +1261,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-size: 32px;
     line-height: 39px;
     width: auto;
-    height: auto;
     position: unset;
-
+    height:0;
     } 
 
     .section-hero-image {
       display: none;
     }
     .section-hero-data {
-        height: 80vh;
+        height: 40vh;
     }
 
     .circle1, .circle2, .circle3, .circle4, .circle5 {
