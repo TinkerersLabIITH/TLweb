@@ -762,6 +762,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         font-weight: 500;
         font-size: 30px;
         margin-left:-120px;
+        width:auto;
+        height:auto;
       }
 
       .hero-bottom {
