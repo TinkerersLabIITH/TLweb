@@ -1050,7 +1050,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 80px;
+    font-size: 60px;
     /* line-height: 85px; */
   }
 
@@ -1064,8 +1064,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 35px;
+    line-height: 20px;
   }
 
   .hero-bottom{
