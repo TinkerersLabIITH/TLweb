@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="top">
 
         <div className="subfooter">
-          <img src="./images/Vector.svg" alt="logo" />
+          <img  src="./images/Vector.svg" alt="logo" />
           <div className="line"></div>
           <div className="names">
             <div >Tinkerers' Lab</div>
@@ -155,14 +155,53 @@ const MainFooter = styled.footer`
   }
   @media (max-width: 980px) {
     .container{
+      margin-right:1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 3.2rem;
+      gap: 3rem;
       
+    
       .grid{
       }
     }
+
+      .subfooter{
+        img{
+          margin-left: 2rem;
+          height: 10rem;
+          width: 10rem;
+        }
+
+        .names{
+          font-size:25px;
+        }
+      }
+      .tagline{
+        font-size:20px;
+      }
+
+      .handels{
+        .accounts{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-top: 2rem;
+          gap: 0.1rem;      
+         }
+      }
+
+      .contacts{
+        color: #6C10C6;
+        font-size: 15px;
+        font-family: Inter;
+        padding-left: 2rem;
+      }    
+
+      
+    
+
+  
   }
 `;

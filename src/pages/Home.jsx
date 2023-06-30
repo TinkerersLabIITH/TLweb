@@ -22,7 +22,7 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-6">
-            <div className="hero-heading">Tinkerers’ Laboratory</div>
+            <div className="hero-heading">Tinkerers' Laboratory</div>
             <div className="hero-tag">IIT Hyderabad</div>
             <div className="hero-bottom">
               <WordAnimation
