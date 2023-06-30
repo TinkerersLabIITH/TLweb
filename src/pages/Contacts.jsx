@@ -488,12 +488,12 @@ const ContactsWrapper = styled.section`
       }
 
       .map-iframe {
-        width: 100%;
+        width: 80vw;
         margin-left: -3vw;
       }
 
       .section-message {
-        width: 100%;
+        width: 80vw;
         order:1;
       }
       .section-message-box {
