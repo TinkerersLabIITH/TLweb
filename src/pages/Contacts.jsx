@@ -2,6 +2,13 @@ import { FunctionsRounded } from '@mui/icons-material';
 import React from 'react'
 import { useState } from 'react';
 import styled from "styled-components";
+import WordAnimation from "../components/homeanimate";
+
+
+const words = ["Think", "Tinker", "Transform"];
+const interval = 200; // Delay between each letter
+const typingDelay = 2000; // Delay before erasing starts
+const erasingDelay = 100; // Delay between each erased letter
 
 const Contacts = () => {
   const [message, setMessage] = useState({
@@ -51,7 +58,14 @@ const Contacts = () => {
         <div className="section-hero-data">
           <h2 className='hero-heading'>Contact us!</h2>
           <h3 className='hero-tag'>Tinkerers’ Lab IITH</h3>
-          <h4 className="hero-bottom">Think Tinker Transform.</h4>
+          <div className="hero-bottom">
+            <WordAnimation
+              words={words}
+              interval={interval}
+              typingDelay={typingDelay}
+              erasingDelay={erasingDelay}
+            />
+          </div>
         </div>
         <div className="section-hero-image">
           <picture>
@@ -239,7 +253,7 @@ const ContactsWrapper = styled.section`
     position: absolute;
     width: 1008px;
     height: 525px;
-    left: 15rem;
+    left: 32rem;
     top: 485px;
       
     font-family: 'Inter';
