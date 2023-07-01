@@ -15,7 +15,8 @@ const Contacts = () => {
   const [message, setMessage] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    send: false
   })
 
   const [warn, setWarn] = useState({
@@ -51,8 +52,16 @@ const Contacts = () => {
         {
           method: "POST",
           body: new FormData(formRef.current),
-        }).then(res => console.log(res.status)).catch(err => console.log(err))
+        }).then(res => console.log(res.status), setMessage({...message, send: true})).catch(err => console.log(err))
   }
+
+  // Confirmation Message
+  const confirm = (
+    <div className='send-confirm'>
+      Thank you for contacting us
+    </div>
+  )
+
   return (
     <ContactsWrapper >
       <div className="ellipse1" />
@@ -136,6 +145,7 @@ const Contacts = () => {
             <div className='section-message-submit'>
               <button>Submit</button>
             </div>
+            {message.send && confirm}
           </form>
         </div>
       </div>
@@ -412,9 +422,18 @@ const ContactsWrapper = styled.section`
     margin-bottom: -0.7rem;
     font-size: 1.15rem;
   }
+
+  .send-confirm {
+    color: yellowgreen;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
   @media (max-width: 1400px){
     .circle4,.circle5 {
-      display: none;
+      visibility: hidden;
     }
   }
   @media (max-width: 1200px) {
@@ -425,7 +444,7 @@ const ContactsWrapper = styled.section`
       justify-content: center;
       gap: 2vh;
       height: max-content;
-      width: 95vw
+      width: 95vw;
       margin-top: -15vh;
     }
 
