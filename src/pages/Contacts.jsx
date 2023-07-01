@@ -11,6 +11,8 @@ const typingDelay = 2000; // Delay before erasing starts
 const erasingDelay = 100; // Delay between each erased letter
 
 const Contacts = () => {
+
+  //Form
   const [message, setMessage] = useState({
     name: '',
     email: '',
@@ -45,11 +47,12 @@ const Contacts = () => {
       message: message.message ? false : true,
       send: message.name && message.email && re.test(message.email) && message.message ? true : false
     }))
-    warn.send && fetch('https://script.google.com/macros/s/AKfycbyRURVOmeH0Q5CIo7t1aE8aqvGFYDlNL94Xn658URWMfVWcT3_pc-xCSVIMTj_aLDZN/exec',
-      {
-        method: "POST",
-        body: new FormData(formRef.current),
-      }).then(res => console.log(res.status)).catch(err => console.log(err))
+    message.name && message.email && re.test(message.email) && message.message &&
+      fetch('https://script.google.com/macros/s/AKfycbweHBn46bB_ikYWUgVWtfV1S-IAB3bxLCA5eV0zHFKaDArWNECVvsr05AESUfj8A-St/exec',
+        {
+          method: "POST",
+          body: new FormData(formRef.current),
+        }).then(res => console.log(res.status)).catch(err => console.log(err))
   }
   return (
     <ContactsWrapper >
