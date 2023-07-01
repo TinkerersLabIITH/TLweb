@@ -6,14 +6,58 @@ import TinkeringEp2 from "../images/tinkering101ep2.png"
 import TinkeringEp1 from "../images/tinkering101ep1.png"
 import TinkerersNight from "../images/tinkerersnight.png"
 const Events = () => {
-  const [showText, setShowText] = useState(false);
-    const handleMouseEnter = () => {
-      setShowText(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setShowText(false);
-    };
+  const divStyle = {
+    backgroundImage: `url(${Cybercon})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'absolute',
+    width: '72.5%',
+    top: '25.8cm',
+    left: '3.4cm',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const EP2Image={
+    backgroundImage: `url(${TinkeringEp2})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'absolute',
+    width: '72.5%',
+    top: '49.8cm',
+    left: '3.4cm',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const EP1Image={
+    backgroundImage: `url(${TinkeringEp1})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'absolute',
+    width: '72.5%',
+    top: '75.2cm',
+    left: '3.4cm',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const TNightIMG={
+    backgroundImage: `url(${TinkerersNight})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'absolute',
+    width: '72.5%',
+    top: '101.5cm',
+    left: '3.4cm',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
   return (
     <EventWrapper>
        <div className='circle1' />
@@ -29,10 +73,10 @@ const Events = () => {
       <div className='circle11'/>
       <div className='circle12'/>
       <div className='circle13'/>
-        <div className='circle14'/>
-        <div className='circle15'/>
-        <div className='circle16'/>
-        <div className='circle17'/>
+      <div className='circle14'/>
+      <div className='circle15'/>
+      <div className='circle16'/>
+      <div className='circle17'/>
         <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <h2 className='hero-heading'>Events</h2>
@@ -45,34 +89,55 @@ const Events = () => {
           </picture>
         </div>
       </div>
+    
       
-      <img src={Cybercon} className="Cybercon-Image"/>
+      <div className='Effect' style={divStyle}>
+          <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+      </div>
       <div className='Cybercon-Border'></div>
-        <div className='Cybercon-Title'>
-        <p className='Cybercon'>Cybercon-2023</p>
+         <div className='Cybercon-Title'>
+         <p className='Cybercon'>Cybercon-2023</p>
       </div>
       <div className='Cybercon-Border-2'></div>
         
-        
-      <img className="Tinkering-Ep2-Img" src={TinkeringEp2}></img>
-        <div className="Tinkering-Ep2-Border"></div>
+     
+     
+      <div className='Effect' style={EP2Image}>
+          <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+      </div>
+      <div className="Tinkering-Ep2-Border"></div>
         <div className='Tinkering-101-ep2-Title'>
         <p className='Tinkering-101-ep2'>Tinkering-101 Episode-2</p>
        </div>
         <div className="Tinkering-Ep2-Border-2"></div>
         
-        <img className='Tinkering-Ep1-Image' src={TinkeringEp1}/>
+
+        
+        <div className='Effect' style={EP1Image}>
+          <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+      </div>
       <div className='Tinkering-Ep1-Border'></div>
       <div className='Tinkering-Ep1-Border-2'></div>
-       
-      <img className="TN-Night" src={TinkerersNight}/>
-      <div className='Tinkering-101-ep-Title'>
+       <div className='Tinkering-101-ep-Title'>
         <p className='Tinkering-101-ep1'>Tinkering-101 Episode-1</p>
+      </div>
+
+      
+      
+      <div className='Effect' style={TNightIMG}>
+          <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
       </div>
       <div className="TN-Border"></div>
       <div className="TN-Border-2"></div>
-      
-     <div className='TN-Container'>
+      <div className='TN-Container'>
       <div className='Tinkerers-Night-Title'>
         <p className='Tinkerers-Night'>Tinkerers Night</p>
       </div>
@@ -331,40 +396,39 @@ background: #6C10C6;
 
 .Cybercon-Image{
       position: absolute;
-width: 1053px;
-height: 612px;
-left: 127px;
+      width: 1053px;
+      height: 612px;
+
+left: 107px;
 top: 972px;
 box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
 border-radius: 84px;
+
 
 }
 .Cybercon-Border{
 box-sizing: border-box;
 position: absolute;
-width: 1053px;
+// width: 1053px;
+width:72.5%;
 height: 612px;
-left: 114px;
+left: 120px;
 top: 961px;
 border: 6px solid #6C10C6;
 border-radius: 84px;
-
+z-index:-1;
 }
 .Cybercon-Border-2{
-
 position: absolute;
 width: 631px;
 height: 159px;
 left: -174px;
 top: 1524px;
-
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 79.5px;
-
 }
 .Cybercon-Title{
-
   position: absolute;
   width: 646px;
   height: 135px;
@@ -387,6 +451,80 @@ border-radius: 79.5px;
   padding-top:35px;
   padding-left:200px;
 }
+.Effect {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 72%;
+  aspect-ratio: 1.72;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  z-index:0.5;
+}
+
+.Effect:before,
+.Effect:after {
+  transform: translate3d(0, 0, 0);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // border-radius:67.5px;
+}
+
+.Effect:after {
+  background: transparentize(#031625, 0.15);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.Effect:before {
+  background: rgba(104, 50, 172, 0.6); /* Replace with your desired light purple color */
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 10, 0) translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.Effect:hover {
+  width: 72.5%;
+}
+
+.Effect:hover:after {
+  opacity: 0;
+}
+
+.Effect:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.Effect:hover .Content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+
+.Effect:hover .Effect {
+  filter: grayscale(0);
+}
+
+.Content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 50%; /* Adjust the vertical position to center the content */
+  opacity: 0;
+  color: white; /* Change the color to purple */
+  font-size: 20px;
+}
+
+
 
 
 
@@ -394,8 +532,7 @@ border-radius: 79.5px;
 
 
 .Tinkering-Ep2-Img{
-
-position: absolute;
+  position: absolute;
 width: 1051px;
 height: 611px;
 left: 129px;
@@ -413,20 +550,18 @@ border-radius: 84px;
   top: 1870px;
   border: 6px solid #6C10C6;
   border-radius: 84px;
+  z-index:-1;
   }
   .Tinkering-Ep2-Border-2{
-
 position: absolute;
 width: 812px;
 height: 159px;
 left: 750px;
 top: 2423px;
-
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 107.5px;
-
-  }
+}
 .Tinkering-101-ep2-Title{
  position: absolute;
   width: 812px;
@@ -448,8 +583,8 @@ border-radius: 107.5px;
   color: #FFFFFF;
   padding-top:35px;
   padding-left:40px;
+ }
  
-}
 
 
 
@@ -478,7 +613,7 @@ left: 116px;
 top: 2829px;
 border: 6px solid #6C10C6;
 border-radius: 84px;
-
+z-index:-1;
 }
 .Tinkering-Ep1-Border-2{
 position: absolute;
@@ -516,19 +651,6 @@ border-radius: 107.5px;
 
 
 
-
-
-.TN-Night{
-  position: absolute;
-  width: 1051px;
-  height: 611px;
-  left: 120px;
-  top: 3835px;
-  background: url(image.png);
-  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 84px;
-  
-}
 .TN-Border{
 
   box-sizing: border-box;
@@ -541,7 +663,7 @@ border-radius: 107.5px;
   
   border: 6px solid #6C10C6;
   border-radius: 84px;
-  
+  z-index:-1;
 }
 .TN-Border-2{
 position: absolute;
@@ -560,7 +682,7 @@ border-radius: 107.5px;
 .Tinkerers-Night-Title{
   padding-right: 20px;
   width: 812px;
-height: 135px;
+  height: 135px;
   background: #8C3FD7;
   border-radius: 67.5px;
   margin-top: 91cm;
@@ -578,7 +700,7 @@ height: 135px;
   color: #FFFFFF;
   padding-top:10px;
   padding-left:20px;
-  z-index:3;
+  z-index:1;
 }
 
 `;
