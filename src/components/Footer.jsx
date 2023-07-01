@@ -191,7 +191,6 @@ const MainFooter = styled.footer`
           gap: 0.1rem;      
          }
       }
-
       .contacts{
         color: #6C10C6;
         font-size: 15px;
