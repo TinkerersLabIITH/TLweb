@@ -11,6 +11,7 @@ const typingDelay = 2000; // Delay before erasing starts
 const erasingDelay = 100; // Delay between each erased letter
 
 const Contacts = () => {
+
   const [message, setMessage] = useState({
     name: '',
     email: '',
@@ -45,11 +46,12 @@ const Contacts = () => {
       message: message.message ? false : true,
       send: message.name && message.email && re.test(message.email) && message.message ? true : false
     }))
-    warn.send && fetch('https://script.google.com/macros/s/AKfycbyRURVOmeH0Q5CIo7t1aE8aqvGFYDlNL94Xn658URWMfVWcT3_pc-xCSVIMTj_aLDZN/exec',
-      {
-        method: "POST",
-        body: new FormData(formRef.current),
-      }).then(res => console.log(res.status)).catch(err => console.log(err))
+    message.name && message.email && re.test(message.email) && message.message &&
+      fetch('https://script.google.com/macros/s/AKfycbweHBn46bB_ikYWUgVWtfV1S-IAB3bxLCA5eV0zHFKaDArWNECVvsr05AESUfj8A-St/exec',
+        {
+          method: "POST",
+          body: new FormData(formRef.current),
+        }).then(res => console.log(res.status)).catch(err => console.log(err))
   }
   return (
     <ContactsWrapper >
@@ -148,7 +150,7 @@ const ContactsWrapper = styled.section`
 
   .ellipse2 {
     position: absolute;
-    width: auto;
+    width: 681px;
     height: 669px;
     left: 0;
     top: -441px;
@@ -165,6 +167,7 @@ const ContactsWrapper = styled.section`
   .ellipse1 {
     position: absolute;
     width: 808px;
+
     @media (max-width: 1200px) {
       width: 700px;
     }
@@ -422,7 +425,7 @@ const ContactsWrapper = styled.section`
       justify-content: center;
       gap: 2vh;
       height: max-content;
-      width: 95vw;
+      width: 95vw
       margin-top: -15vh;
     }
 
@@ -432,7 +435,7 @@ const ContactsWrapper = styled.section`
     font-style: normal;
     font-weight: 700;width: auto;
     height: auto;
-    font-size: 56px;
+    font-size: 80px;
     position: unset;
 }
 
@@ -442,8 +445,6 @@ const ContactsWrapper = styled.section`
     width: auto;
     height: auto;
     position: unset;
-    font-size: 33px;
-
     }
 
     .hero-bottom {
@@ -453,7 +454,7 @@ const ContactsWrapper = styled.section`
     font-size: 32px;
     line-height: 39px;
     width: auto;
-    height: 20px;
+    height: auto;
     position: unset;
 
     } 
