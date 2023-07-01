@@ -93,7 +93,7 @@ const Contacts = () => {
   const messageRef = useRef(null)
   const mapRef = useRef(null)
   const imgRef = useRef(null)
-  screenSize.width >= 1200 ?
+  if (screenSize.width >= 1200) {
     useEffect(() => {
       const messageElem = messageRef.current
       gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
@@ -113,7 +113,30 @@ const Contacts = () => {
           toggleActions: "restart complete restart complete"
         }
       })
-    }, []) :
+    }, [])} 
+    else if (screenSize.width <=770) {
+      useEffect(() => {
+        const messageElem = messageRef.current
+        gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
+          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+            trigger: messageElem,
+            start: "-55% 50%",
+            end: "+=1280",
+            toggleActions: "restart complete restart complete"
+          }
+        })
+        const mapElem = mapRef.current
+        gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
+          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+            trigger: mapElem,
+            start: "-65% 50%",
+            end: "+=1250",
+            toggleActions: "restart complete restart complete"
+          }
+        })
+      }, [])
+    }
+    else {
     useEffect(() => {
       const messageElem = messageRef.current
       gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
@@ -134,6 +157,8 @@ const Contacts = () => {
         }
       })
     }, [])
+
+  }
 
 
 
@@ -605,6 +630,7 @@ const ContactsWrapper = styled.section`
         flex-direction: column;
         height: 180vh;
         padding: 0;
+        margin-top: 8vh;
       }
 
       .map-iframe {
