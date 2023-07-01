@@ -350,7 +350,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 8rem;
     /* line-height: 85px; */
   }
 
@@ -364,8 +364,8 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 3rem;
-    line-height: 58px;
+    font-size: 5rem;
+    line-height: 7rem;
   }
 
   .hero-bottom{
@@ -566,7 +566,7 @@ const ContactsWrapper = styled.section`
     font-weight: 700;
     width: auto;
     height: auto;
-    font-size: 5rem;
+    font-size: 5.5rem;
     position: unset;
 }
 
@@ -576,6 +576,8 @@ const ContactsWrapper = styled.section`
     width: auto;
     height: auto;
     position: unset;
+    font-size: 4rem;
+    line-height: 4rem;
     }
 
     .hero-bottom {
