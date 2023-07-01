@@ -12,7 +12,6 @@ const erasingDelay = 100; // Delay between each erased letter
 
 const Contacts = () => {
 
-  //Form
   const [message, setMessage] = useState({
     name: '',
     email: '',
@@ -168,6 +167,10 @@ const ContactsWrapper = styled.section`
   .ellipse1 {
     position: absolute;
     width: 808px;
+
+    @media (max-width: 1200px) {
+      width: 700px;
+    }
     height: 794px;
     left: -363px;
     top: -349px;
@@ -422,7 +425,7 @@ const ContactsWrapper = styled.section`
       justify-content: center;
       gap: 2vh;
       height: max-content;
-      width: 100vw;
+      width: 95vw
       margin-top: -15vh;
     }
 
@@ -442,7 +445,6 @@ const ContactsWrapper = styled.section`
     width: auto;
     height: auto;
     position: unset;
-
     }
 
     .hero-bottom {

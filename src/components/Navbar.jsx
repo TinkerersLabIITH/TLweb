@@ -65,8 +65,8 @@ const NavIcon = styled.div`
   flex-direction: column;
   cursor: pointer;
 
-  @media (max-width: 768px) {
-   position: fixed;
+  @media (max-width: 1200px) {
+    position: fixed;
     top: 4rem;
     right: 2rem;
     display: flex;
@@ -101,7 +101,7 @@ const NavIcon = styled.div`
 `;
 
 const NavMenu = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -109,20 +109,21 @@ const NavMenu = styled.div`
     height: 100%;
     background-color: #fff;
     padding: 1rem;
-    transform: ${({ showMenu }) =>(showMenu ? "translateY(0%)" : "translateY(-100%)")};
+    transform: ${({ showMenu }) =>
+      showMenu ? "translateY(0%)" : "translateY(-100%)"};
     z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-}
+  }
 `;
 
 const NavList = styled.ul`
-@media (max-width: 768px) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 8rem;
-}
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8rem;
+  }
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -139,7 +140,6 @@ const NavItem = styled.li`
     line-height: 20px;
     display: flex;
     align-items: center;
-
 
     transition: color 0.3s;
     padding: 2vw;

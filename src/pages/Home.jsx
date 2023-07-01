@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import WordAnimation from "../components/homeanimate";
-import ImageScroll from "../components/imagescroll"
+import ImageScroll from "../components/imagescroll";
 import { NavLink } from "react-router-dom";
 
 const words = ["Think", "Tinker", "Transform"];
@@ -21,7 +21,7 @@ const Home = () => {
       {/* <div className="circle5" /> */}
       <div className="container">
         <div className="row">
-          <div className="col-xl-6">
+          <div className="col-xl" id="left">
             <div className="hero-heading">Tinkerers’ Laboratory</div>
             <div className="hero-tag">IIT Hyderabad</div>
             <div className="hero-bottom">
@@ -33,10 +33,10 @@ const Home = () => {
               />
             </div>
             <button className="reachus">
-            <NavLink to="/contacts">Reach Us</NavLink>
+              <NavLink to="/contacts">Reach Us</NavLink>
             </button>
           </div>
-          <div className="col-xl-6">
+          <div className="col-xl" id="right">
             <div className="section-hero-image">
               <picture>
                 <img className="pic1" src="./images/Home.svg" alt="image" />
@@ -58,33 +58,33 @@ const Home = () => {
         <div className="row" id="aims2">
           <div className="col-lg-4 col-md-6">
             <div className="cont">
-            <div className="box">
-              <img src="./images/aim1.svg" alt="Aim1" />
-            </div>
-            <div className="content">
-              <div className="heading">Availability</div>
-              <div className="line"></div>
-              <div className="desp2">
-                We know that the best ideas don't always come to us during work
-                hours. Tinkerers' Lab is open 24/7, giving you the liberty to
-                build and innovate whenever.
+              <div className="box">
+                <img src="./images/aim1.svg" alt="Aim1" />
               </div>
-            </div>
+              <div className="content">
+                <div className="heading">Availability</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  We know that the best ideas don't always come to us during
+                  work hours. Tinkerers' Lab is open 24/7, giving you the
+                  liberty to build and innovate whenever.
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
             <div className="cont">
-            <div className="box">
-              <img src="./images/aim2.svg" alt="Aim1" />
-            </div>
-            <div className="content">
-              <div className="heading">Resources</div>
-              <div className="line"></div>
-              <div className="desp2">
-                We have a wide range of resources ,from the commonplace
-                Raspberry Pis and Arduinos to CNCs and 3D Printers.
+              <div className="box">
+                <img src="./images/aim2.svg" alt="Aim1" />
               </div>
-            </div>
+              <div className="content">
+                <div className="heading">Resources</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  We have a wide range of resources ,from the commonplace
+                  Raspberry Pis and Arduinos to CNCs and 3D Printers.
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-6">
@@ -116,7 +116,8 @@ const Home = () => {
 export default Home;
 
 const Homestyled = styled.section`
-  .col-lg-4, .col-md-6 {
+  .col-lg-4,
+  .col-md-6 {
     padding-top: 20px;
   }
   .cont {
@@ -125,9 +126,10 @@ const Homestyled = styled.section`
     align-items: center;
   }
   .hand {
-    position:absolute;
-    z-index:3;
-    right:0px;
+    position: absolute;
+    z-index: 3;
+    right: 5vw;
+    margin-bottom: 5vw;
   }
   .separator {
     border: 3px solid rgba(0, 0, 0, 0.1);
@@ -142,15 +144,17 @@ const Homestyled = styled.section`
 
     color: #001824;
     padding: 0rem 15vw;
-     margin-bottom: 15vh;
+    margin-bottom: 15vh;
   }
-  #aims2 , #aims{
-    width:90vw;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding-left:5vw;
-    position:relative;
+  #aims2,
+  #aims {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
   }
   .line {
     margin: 2.5rem 5rem;
@@ -173,7 +177,7 @@ const Homestyled = styled.section`
     border-radius: 39px;
     margin-top: -3.5rem;
     z-index: 1;
-    height: 35rem;
+    height: 38rem;
   }
   .box {
     background: #eddaff;
@@ -216,7 +220,7 @@ const Homestyled = styled.section`
   .reachus {
     width: 220px;
     height: 10vh;
-    a{
+    a {
       color: #fff;
     }
 
@@ -236,10 +240,10 @@ const Homestyled = styled.section`
   }
   .ellipse2 {
     position: absolute;
-    width: 681px;
-    height: 669px;
+    width: 33vw;
+    height: 35vw;
     left: 0;
-    top: -441px;
+    top: -18vw;
 
     background: radial-gradient(
         40.83% 40.83% at 50% 50%,
@@ -261,10 +265,10 @@ const Homestyled = styled.section`
 
   .ellipse1 {
     position: absolute;
-    width: 808px;
-    height: 794px;
-    left: -363px;
-    top: -349px;
+    width: 40vw;
+    height: 45vw;
+    left: -18vw;
+    top: -19vw;
 
     background: radial-gradient(
         40.83% 40.83% at 50% 50%,
@@ -285,6 +289,9 @@ const Homestyled = styled.section`
   .col-xl-6 {
     text-align: center;
   }
+  .col-xl {
+    text-align: center;
+  }
 
   .circle3 {
     position: absolute;
@@ -294,6 +301,27 @@ const Homestyled = styled.section`
     border-radius: 50%;
     left: 12rem;
     top: 68rem;
+  }
+  .pic1 {
+    animation: rotation1 8s infinite linear;
+  }
+
+  @keyframes rotation1 {
+    0%,
+    100% {
+      transform: rotate(-15deg);
+    }
+    10%,
+    90% {
+      transform: rotate(-10deg);
+    }
+    40%,
+    60% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
   }
 
   .circle4 {
@@ -355,9 +383,9 @@ const Homestyled = styled.section`
   picture {
     text-align: center;
   }
-  @media (min-width:768px){
-    .desp2{
-      padding:0rem 5vw;
+  @media (min-width: 768px) {
+    .desp2 {
+      padding: 0rem 5vw;
     }
   }
   @media (max-width: 1200px) {
@@ -365,6 +393,19 @@ const Homestyled = styled.section`
       font-weight: 700;
       font-size: 24px;
       width: 75vw;
+    }
+    #right {
+      display: none;
+    }
+    body {
+      min-width: fit-content;
+    }
+    .desp2 {
+      padding: 0rem 5vw;
+    }
+    .container {
+      justify-content: center;
+      width: 100vw;
     }
     .pic1 {
       display: none;
@@ -404,11 +445,5 @@ const Homestyled = styled.section`
     .circle5 {
       display: none;
     }
-    .ellipse1,
-    .ellipse2 {
-      display: none;
-    }
-   
-    
   }
 `;
