@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { useState } from 'react';
 import styled from "styled-components";
 import WordAnimation from "../components/homeanimate";
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
@@ -56,7 +56,7 @@ const Contacts = () => {
         {
           method: "POST",
           body: new FormData(formRef.current),
-        }).then(res => console.log(res.status), setMessage({...message, send: true})).catch(err => console.log(err))
+        }).then(res => console.log(res.status), setMessage({ ...message, send: true })).catch(err => console.log(err))
   }
 
   // Confirmation Message
@@ -66,29 +66,102 @@ const Contacts = () => {
     </div>
   )
 
+  //Screensize
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+
+
+    return (() => {
+      window.removeEventListener('resize', updateDimension);
+    })
+  }, [screenSize])
+
   //Animations
-    gsap.registerPlugin(ScrollTrigger)
-    const messageRef = useRef(null)
-    const mapRef = useRef(null)
-    const imgRef = useRef(null)
-    useEffect(()=> {
+  gsap.registerPlugin(ScrollTrigger)
+  const messageRef = useRef(null)
+  const mapRef = useRef(null)
+  const imgRef = useRef(null)
+  if (screenSize.width >= 1200) {
+    useEffect(() => {
       const messageElem = messageRef.current
-      gsap.fromTo(messageElem,{autoAlpha:0,translateX:'10%'},{autoAlpha:1,translateX:'0', duration:3, scrollTrigger : {
-        trigger:messageElem,
-        markers:true,
-        start:"50px 45%",
-        end:"+=1290",
-        toggleActions: "restart complete restart complete"
-      }})
+      gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 3, scrollTrigger: {
+          trigger: messageElem,
+          start: "50px 45%",
+          end: "+=1290",
+          toggleActions: "restart complete restart complete"
+        }
+      })
       const mapElem = mapRef.current
-      gsap.fromTo(mapElem,{autoAlpha:0,translateX:'-10%'},{autoAlpha:1,translateX:'0', duration:3, scrollTrigger : {
-        trigger:mapElem,
-        markers:true,
-        start:"50px 45%",
-        end:"+=1250",
-        toggleActions: "restart complete restart complete"
-      }})
+      gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 3, scrollTrigger: {
+          trigger: mapElem,
+          start: "50px 45%",
+          end: "+=1250",
+          toggleActions: "restart complete restart complete"
+        }
+      })
+    }, [])} 
+    else if (screenSize.width <=770) {
+      useEffect(() => {
+        const messageElem = messageRef.current
+        gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
+          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+            trigger: messageElem,
+            start: "-55% 50%",
+            end: "+=1280",
+            toggleActions: "restart complete restart complete"
+          }
+        })
+        const mapElem = mapRef.current
+        gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
+          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+            trigger: mapElem,
+            start: "-65% 50%",
+            end: "+=1250",
+            toggleActions: "restart complete restart complete"
+          }
+        })
+      }, [])
+    }
+    else {
+    useEffect(() => {
+      const messageElem = messageRef.current
+      gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+          trigger: messageElem,
+          start: "-60% 50%",
+          end: "+=1320",
+          toggleActions: "restart complete restart complete"
+        }
+      })
+      const mapElem = mapRef.current
+      gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+          trigger: mapElem,
+          start: "-60% 50%",
+          end: "+=1300",
+          toggleActions: "restart complete restart complete"
+        }
+      })
     }, [])
+
+  }
+
+
+
 
   return (
     <ContactsWrapper >
@@ -114,7 +187,7 @@ const Contacts = () => {
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="./images/Contacts.svg" alt="image" className='hero-img' ref={imgRef}/>
+            <img src="./images/Contacts.svg" alt="image" className='hero-img' ref={imgRef} />
           </picture>
         </div>
       </div>
@@ -557,6 +630,7 @@ const ContactsWrapper = styled.section`
         flex-direction: column;
         height: 180vh;
         padding: 0;
+        margin-top: 8vh;
       }
 
       .map-iframe {
