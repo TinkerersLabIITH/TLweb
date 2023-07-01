@@ -6,7 +6,9 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <MainFooter>
+    
+    <Mainfooter>
+     
       <div className="top">
 
         <div className="subfooter">
@@ -19,7 +21,7 @@ const Footer = () => {
         </div>
         <div className="tagline">Think Thinker Transform.</div>
       </div>
-      <footer>
+     
         <div className="container grid grid-three-column">
           <div className="location">
             <div className="bold"><b>Location</b></div>
@@ -53,20 +55,23 @@ const Footer = () => {
         <div className="copyright">
           Copyright © 2023 All Rights Reserved | IIT Hyderabad
         </div>
-      </footer>
-    </MainFooter>
+      
+    </Mainfooter>
+   
   )
 }
 export default Footer;
 
-const MainFooter = styled.footer`
-
+const Mainfooter = styled.footer`
+    position:relative;
   .top{
     border-top: 1px solid #6C10C6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
+    flex-shrink:0;
   }
   .subfooter{
     padding-top: 5rem ;
@@ -74,16 +79,19 @@ const MainFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+   
 
     .line{
       width: 3px;
       height: 12rem;
       background: #6C10C6;
+      
     }
     img{
       left: 2rem;
       height: 12rem;
       width: 12rem;
+      
     }
 
     .names{
@@ -93,6 +101,7 @@ const MainFooter = styled.footer`
       font-style: normal;
       font-weight: 700;
       font-size: 40px;
+      
     }
   }
 
@@ -104,10 +113,14 @@ const MainFooter = styled.footer`
       font-style: normal;
       font-weight: 700;
       font-size: 40px;
+     
   }
 
   footer{
     padding-top: 5rem ;
+    flex: 1;
+    
+    bottom:0;
   }
 
   .copyright{
@@ -117,6 +130,7 @@ const MainFooter = styled.footer`
     font-size: 20px;
     font-family: Inter;
     text-align: center;
+    
   }
 
   .location{
@@ -124,6 +138,7 @@ const MainFooter = styled.footer`
     font-size: 20px;
     font-family: Inter;
     margin: 0 6rem;
+   
   }
 
   .handels{
@@ -131,6 +146,7 @@ const MainFooter = styled.footer`
     font-size: 20px;
     font-family: Inter;
     text-align: center;
+   
 
     .accounts{
       display: flex;
@@ -138,6 +154,7 @@ const MainFooter = styled.footer`
       justify-content: center;
       padding-top: 2.5rem;
       gap: 2rem;
+      
     }
   }
 
@@ -146,11 +163,12 @@ const MainFooter = styled.footer`
     font-size: 20px;
     font-family: Inter;
     padding-left: 6.5rem;
-
+   
     svg{
       font-size: 25px;
       margin-right: 20px;
       margin-bottom: 10px;
+      
     }
   }
   @media (max-width: 980px) {
@@ -160,9 +178,6 @@ const MainFooter = styled.footer`
       align-items: center;
       justify-content: center;
       gap: 3.2rem;
-      
-      .grid{
-      }
     }
   }
 `;
