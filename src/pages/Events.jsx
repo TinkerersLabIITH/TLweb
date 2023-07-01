@@ -230,7 +230,7 @@ background: #6C10C6;
 
 }
 .circle9{
-  /* Ellipse 28 */
+  
 
 position: absolute;
 width: 20px;
@@ -242,7 +242,7 @@ background: #6C10C6;
 
 }
 .circle10{
-  /* Ellipse 27 */
+ 
 
 position: absolute;
 width: 12px;
@@ -254,8 +254,6 @@ background: #6C10C6;
 
 }
 .circle11{
-  /* Ellipse 26 */
-
 position: absolute;
 width: 20px;
 height: 20px;
@@ -266,7 +264,6 @@ background: #6C10C6;
 
 }
 .circle12{
-  /* Ellipse 30 */
 
 position: absolute;
 width: 20px;
@@ -290,8 +287,6 @@ background: #6C10C6;
 border-radius:50%;
 }
 .circle14{
-  /* Ellipse 31 */
-
 position: absolute;
 width: 12px;
 height: 12px;
@@ -302,8 +297,6 @@ background: #6C10C6;
 border-radius:50%;
 }
 .circle15{
-  /* Ellipse 37 */
-
 position: absolute;
 width: 20px;
 height: 20px;
@@ -325,7 +318,6 @@ border-radius:50%;
   
 }
 .circle17{
-  /* Ellipse 35 */
 
 position: absolute;
 width: 20px;
