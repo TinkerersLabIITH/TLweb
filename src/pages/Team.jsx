@@ -69,7 +69,7 @@ const Team = () => {
             <div className="position">SOFTWARE</div>
             <ul className="name-cores">
               <li>ARSH SRIVASTAVA</li>
-              <li>MOHAMMED KAIF</li>
+              <li>MOHAMED KAIF</li>
               <li>AJAY KRISHNAN K</li>
               <li>SATPUTE ANIKET TUKARAM</li>
               <li>DEEPSHIKHA</li>
