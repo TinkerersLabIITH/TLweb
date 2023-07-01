@@ -188,6 +188,11 @@ const InventoryWrapper = styled.section`
       text-align: center;
       width: 100vw;
     }
+
+    .wip h2{
+      font-size: 4rem;
+      padding-bottom: 5rem;
+    }
     .pic1 {
       display: none;
     }
