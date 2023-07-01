@@ -1505,7 +1505,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           gap: 0.1rem;      
          }
       }
-
       .contacts{
         color: #6C10C6;
         font-size: 15px;
