@@ -1,8 +1,10 @@
 import { FunctionsRounded } from '@mui/icons-material';
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useState } from 'react';
 import styled from "styled-components";
 import WordAnimation from "../components/homeanimate";
+import {gsap} from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 const words = ["Think", "Tinker", "Transform"];
@@ -11,6 +13,8 @@ const typingDelay = 2000; // Delay before erasing starts
 const erasingDelay = 100; // Delay between each erased letter
 
 const Contacts = () => {
+
+  //Form
 
   const [message, setMessage] = useState({
     name: '',
@@ -62,6 +66,30 @@ const Contacts = () => {
     </div>
   )
 
+  //Animations
+    gsap.registerPlugin(ScrollTrigger)
+    const messageRef = useRef(null)
+    const mapRef = useRef(null)
+    const imgRef = useRef(null)
+    useEffect(()=> {
+      const messageElem = messageRef.current
+      gsap.fromTo(messageElem,{autoAlpha:0,translateX:'10%'},{autoAlpha:1,translateX:'0', duration:3, scrollTrigger : {
+        trigger:messageElem,
+        markers:true,
+        start:"50px 45%",
+        end:"+=1290",
+        toggleActions: "restart complete restart complete"
+      }})
+      const mapElem = mapRef.current
+      gsap.fromTo(mapElem,{autoAlpha:0,translateX:'-10%'},{autoAlpha:1,translateX:'0', duration:3, scrollTrigger : {
+        trigger:mapElem,
+        markers:true,
+        start:"50px 45%",
+        end:"+=1250",
+        toggleActions: "restart complete restart complete"
+      }})
+    }, [])
+
   return (
     <ContactsWrapper >
       <div className="ellipse1" />
@@ -86,12 +114,12 @@ const Contacts = () => {
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="./images/Contacts.svg" alt="image" className='hero-img' />
+            <img src="./images/Contacts.svg" alt="image" className='hero-img' ref={imgRef}/>
           </picture>
         </div>
       </div>
       <div className="section-map-message">
-        <div className='section-map'>
+        <div className='section-map' ref={mapRef}>
           <div className='map-iframe'>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d461.1025061004142!2d78.12566068992736!3d17.597490805694715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf706d15f396d%3A0xd8767eda72322c70!2sTinkerers&#39;%20Laboratory%20IITH!5e0!3m2!1sen!2sin!4v1688018342297!5m2!1sen!2sin"
@@ -104,7 +132,7 @@ const Contacts = () => {
             </iframe>
           </div>
         </div>
-        <div className='section-message'>
+        <div className='section-message' ref={messageRef}>
           <h4>Message Us</h4>
           <form className='section-message-box' onSubmit={handleSubmit} noValidate ref={formRef}>
             <div className='section-message-box-wraps'>
@@ -299,12 +327,26 @@ const ContactsWrapper = styled.section`
     width: 100%;
   }
 
+  picture {
+    animation: leftright 6s infinite linear;
+  }
+
+  @keyframes leftright {
+    0%,
+    100% {
+      transform: translateX(3%);
+    }
+    50% {
+      transform: translateX(1%);
+    }
+  }
+
   .section-map-message {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10vw;
-    height: 100vh;
+    height: 105vh;
   }
   .section-map {
     z-index: 5;
@@ -363,7 +405,7 @@ const ContactsWrapper = styled.section`
     border-radius: 16px;
     background: #F3F3F3;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10) inset;
-    color: #CBCBCB;
+    color: #757575;
     font-size: 1.55rem;
     line-height: 5.3125rem;
     padding:  0.65rem 1.5rem;
@@ -379,7 +421,7 @@ const ContactsWrapper = styled.section`
     border-radius: 16px;
     background: #F3F3F3;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10) inset;
-    color: #CBCBCB;
+    color: #757575;
     font-size: 1.55rem;
     resize: none;
     padding:  0.9rem 1.6rem;
