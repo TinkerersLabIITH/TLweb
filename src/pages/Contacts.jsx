@@ -101,7 +101,7 @@ const Contacts = () => {
           trigger: messageElem,
           start: "50px 45%",
           end: "+=1290",
-          toggleActions: "restart complete restart complete"
+          toggleActions: "restart complete none none"
         }
       })
       const mapElem = mapRef.current
@@ -110,7 +110,7 @@ const Contacts = () => {
           trigger: mapElem,
           start: "50px 45%",
           end: "+=1250",
-          toggleActions: "restart complete restart complete"
+          toggleActions: "restart complete none none"
         }
       })
     }, [])} 
@@ -122,7 +122,7 @@ const Contacts = () => {
             trigger: messageElem,
             start: "-55% 50%",
             end: "+=1280",
-            toggleActions: "restart complete restart complete"
+            toggleActions: "restart complete none none"
           }
         })
         const mapElem = mapRef.current
@@ -131,7 +131,7 @@ const Contacts = () => {
             trigger: mapElem,
             start: "-65% 50%",
             end: "+=1250",
-            toggleActions: "restart complete restart complete"
+            toggleActions: "restart complete none none"
           }
         })
       }, [])
@@ -144,7 +144,7 @@ const Contacts = () => {
           trigger: messageElem,
           start: "-60% 50%",
           end: "+=1320",
-          toggleActions: "restart complete restart complete"
+          toggleActions: "restart complete none none"
         }
       })
       const mapElem = mapRef.current
@@ -153,16 +153,12 @@ const Contacts = () => {
           trigger: mapElem,
           start: "-60% 50%",
           end: "+=1300",
-          toggleActions: "restart complete restart complete"
+          toggleActions: "restart complete none none"
         }
       })
     }, [])
 
   }
-
-
-
-
   return (
     <ContactsWrapper >
       <div className="ellipse1" />
@@ -354,7 +350,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 80px;
+    font-size: 5rem;
     /* line-height: 85px; */
   }
 
@@ -368,7 +364,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 58px;
   }
 
@@ -382,7 +378,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 39px;
   }
 
@@ -567,9 +563,10 @@ const ContactsWrapper = styled.section`
       display: flex;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;width: auto;
+    font-weight: 700;
+    width: auto;
     height: auto;
-    font-size: 80px;
+    font-size: 5rem;
     position: unset;
 }
 
@@ -585,7 +582,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 39px;
     width: auto;
     height: auto;
@@ -648,6 +645,9 @@ const ContactsWrapper = styled.section`
       .section-map {
         width: 100%;
         order:2;
+      }
+      .ellipse1, .ellipse2 {
+        display:none;
       }
     }
 
