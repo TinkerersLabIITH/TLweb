@@ -463,8 +463,7 @@ aspect-ratio:3.96;
   .Cybercon-Title{
     width: 100%;
     left: 0;
-   
-    aspect-ratio: auto;
+   aspect-ratio: auto;
   }
   
   .Cybercon {
@@ -523,7 +522,7 @@ aspect-ratio:3.96;
 }
 
 .Effect:before {
-  background: rgba(104, 50, 172, 0.6); /* Replace with your desired light purple color */
+  background: rgba(104, 50, 172, 0.6); 
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, 10, 0) translateY(100%);
@@ -560,9 +559,9 @@ aspect-ratio:3.96;
   z-index: 10;
   text-align: center;
   margin: 0 1.618em;
-  top: 50%; /* Adjust the vertical position to center the content */
+  top: 50%; 
   opacity: 0;
-  color: white; /* Change the color to purple */
+  color: white; 
   font-size: 20px;
 }
 
@@ -663,50 +662,6 @@ border-radius: 107.5px;
   }
 }
 
-/* For screens larger than 1024px */
-// @media (min-width: 1024px) {
-//   .Tinkering-Ep2-Border-2 {
-//     width: 812px;
-//     height: 159px;
-//     left: 750px;
-//     top: 2423px;
-//   }
-  
-//   .Tinkering-101-ep2-Title {
-//     width: 60%;
-//     left: 720px;
-//     top: 2423px;
-//     aspect-ratio: 6.01;
-//   }
-// }
-
-
-// .Tinkering-Ep2-Border-2 {
-//   position: absolute;
-//   background: #6C10C6;
-//   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-//   border-radius: 107.5px;
-// }
-
-// .Tinkering-101-ep2-Title {
-//   position: absolute;
-//   background: #8C3FD7;
-//   border-radius: 107.5px;
-//   z-index: 1;
-// }
-
-// .Tinkering-101-ep2 {
-//   position: relative;
-//   font-family: 'Inter';
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 48px;
-//   line-height: 58px;
-//   color: #FFFFFF;
-//   padding-top: 35px;
-//   padding-left: 10px;
-// }
-
 
 
 
@@ -722,7 +677,6 @@ border-radius: 107.5px;
   top: 2847px;
   box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
   border-radius: 84px;
-  
   
 }
 .Tinkering-Ep1-Border{
