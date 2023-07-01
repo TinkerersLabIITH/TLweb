@@ -20,15 +20,15 @@ const Team = () => {
         <div className="section-hero-data">
           <h2 className='hero-heading'>Our Team</h2>
           <h3 className='hero-tag'>Tinkerers' Lab IITH</h3>
-          <div className="hero-bottom">
+           <div className="hero-bottom">
               <WordAnimation
                 words={words}
                 interval={interval}
                 typingDelay={typingDelay}
                 erasingDelay={erasingDelay}
               />
-            </div>
-           
+            </div> 
+        
         </div>
         <div className="section-hero-image">
           <picture>
@@ -295,6 +295,12 @@ const TeamWrapper = styled.section`
       font-size: 48px;
       font-family: Inter;
       font-weight: 700;
+      // animation: fadeIn 5s;
+      
+      -webkit-animation: slide-top 1s ease-in reverse ;
+      animation: slide-top 1s ease-in reverse ;
+      
+
     }
 
     img{
@@ -316,12 +322,25 @@ const TeamWrapper = styled.section`
       font-size: 48px;
       font-family: Inter;
       font-weight: 700;
+      // animation: fadeIn 8s;
+      -webkit-animation: slide-top 2s ease-in reverse ;
+      animation: slide-top 2s ease-in reverse ;
+      
+
+
     }
 
     .img-secs{
       display: flex;
       flex-direction: row;
-       margin-bottom:40px;
+      margin-bottom:40px;
+      animation: fadeIn ease 5s;
+      -webkit-animation: fadeIn ease 5s;
+      -moz-animation: fadeIn ease 5s;
+      -o-animation: fadeIn ease 5s;
+      -ms-animation: fadeIn ease 5s;
+
+
       
     }
   }
@@ -334,7 +353,10 @@ const TeamWrapper = styled.section`
     margin:30px;
     
     .cores-position{
-      
+    
+    -webkit-animation: slide-top 3s ease-in reverse ;
+    animation: slide-top 3s ease-in reverse ;
+    //  animation: fadeIn 10s;
       color: #000;
       text-align: center;
       font-size: 48px;
@@ -366,6 +388,9 @@ const TeamWrapper = styled.section`
           font-family: Inter;
           font-weight: 700;  
           margin-top:40px;
+          -webkit-animation: slide-top 4s ease-in reverse ;
+          animation: slide-top 4s ease-in reverse ;
+         
         }
   
         .name-cores{
@@ -373,6 +398,9 @@ const TeamWrapper = styled.section`
           font-size:25px;
           color: #6C10C6;
           text-align: center;
+          -webkit-animation: slide-top 4s ease-in reverse ;
+          animation: slide-top 4s ease-in reverse ;
+         
 
         }
       }
@@ -382,7 +410,53 @@ const TeamWrapper = styled.section`
     } 
   }
 
+ @-webkit-keyframes slide-top {
+   0% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+   }
+   100% {
+     -webkit-transform: translateY(-100px);
+             transform: translateY(-100px);
+   }
+ }
+ @keyframes slide-top {
+   0% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+   }
+   100% {
+     -webkit-transform: translateY(-100px);
+             transform: translateY(-100px);
+   }
+ }
 
+
+ @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+ 
   .circle6{
     position: absolute;
     background-color: #6C10C6;
@@ -422,14 +496,51 @@ const TeamWrapper = styled.section`
     left: 195rem;
     top: 100rem;
   }
+
+  
+  
   
 
 
-    @media (min-width:768px){
+    // @media (min-width:768px){
       
-    }
+    // }
 
     @media (max-width: 1200px) {
+
+
+      .section-hero-data{
+        margin:0;
+        width: 100%;
+
+        .hero-heading {
+          top:180px;
+          font-weight: 800;
+          font-size: 50px;
+          left:50px;
+          text-align: center;
+        }
+  
+        
+        .hero-tag {
+          top:240px;
+          font-weight: 500;
+          font-size: 30px;
+          left:30px;
+          width:auto;
+          height:auto;
+          text-align:center;
+        }
+  
+        .hero-bottom {
+          font-size:30px;
+          margin-top:120px;
+          margin-left:30px;
+          text-align: center;
+          
+        }
+        
+      }
       .circle1 {
         display: none;
       }
@@ -467,31 +578,7 @@ const TeamWrapper = styled.section`
         display: none;
       }
 
-      .hero-heading {
-        top:180px;
-        font-weight: 800;
-        font-size: 50px;
-        margin-left:-100px;
-        text-align: center;
-      }
-
       
-      .hero-tag {
-        top:240px;
-        font-weight: 500;
-        font-size: 30px;
-        margin-left:-120px;
-        width:auto;
-        height:auto;
-      }
-
-      .hero-bottom {
-        font-size:30px;
-        margin-top:120px;
-        margin-left:30px;
-        text-align: center;
-        
-      }
 
       .secretaries{
         
@@ -501,6 +588,7 @@ const TeamWrapper = styled.section`
           align-content: center;
           gap: 3rem;
         }
+
       }
 
       .cores{
@@ -521,6 +609,8 @@ const TeamWrapper = styled.section`
               margin-left:0px;
             }
 
+
+            
             .name-cores{
               font-size:20px;
               text-align: center;
