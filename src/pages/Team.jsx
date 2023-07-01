@@ -69,7 +69,7 @@ const Team = () => {
             <div className="position">SOFTWARE</div>
             <ul className="name-cores">
               <li>ARSH SRIVASTAVA</li>
-              <li>MOHAMMED KAIF</li>
+              <li>MOHAMED KAIF</li>
               <li>AJAY KRISHNAN K</li>
               <li>SATPUTE ANIKET TUKARAM</li>
               <li>DEEPSHIKHA</li>
@@ -357,8 +357,8 @@ const TeamWrapper = styled.section`
         margin-bottom:200px;
 
         .position{
-          width:500px;
-          margin-left:-80px;  
+          width:auto;
+          margin-left:0px;  
           padding: 2rem 0;
           color: #000;
           text-align: center;
@@ -481,6 +481,8 @@ const TeamWrapper = styled.section`
         font-weight: 500;
         font-size: 30px;
         margin-left:-120px;
+        width:auto;
+        height:auto;
       }
 
       .hero-bottom {
@@ -516,7 +518,7 @@ const TeamWrapper = styled.section`
             .position{
               text-align: center;
               font-size:30px;
-              margin-left:-85px;
+              margin-left:0px;
             }
 
             .name-cores{
