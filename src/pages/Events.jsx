@@ -9,9 +9,9 @@ const Events = () => {
   const divStyle = {
     backgroundImage: `url(${Cybercon})`,
     transform: 'translate3d(0, 0, 0)',
-    position: 'absolute',
+    position: 'relative',
     width: '72.5%',
-    top: '25.8cm',
+    top: '1.8cm',
     left: '3.4cm',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -22,9 +22,9 @@ const Events = () => {
   const EP2Image={
     backgroundImage: `url(${TinkeringEp2})`,
     transform: 'translate3d(0, 0, 0)',
-    position: 'absolute',
+    position: 'relative',
     width: '72.5%',
-    top: '49.8cm',
+    top: '-15.2cm',
     left: '3.4cm',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -35,9 +35,9 @@ const Events = () => {
   const EP1Image={
     backgroundImage: `url(${TinkeringEp1})`,
     transform: 'translate3d(0, 0, 0)',
-    position: 'absolute',
+    position: 'relative',
     width: '72.5%',
-    top: '75.2cm',
+    top: '-27.2cm',
     left: '3.4cm',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -48,9 +48,9 @@ const Events = () => {
   const TNightIMG={
     backgroundImage: `url(${TinkerersNight})`,
     transform: 'translate3d(0, 0, 0)',
-    position: 'absolute',
+    position: 'relative',
     width: '72.5%',
-    top: '101.5cm',
+    top: '-40cm',
     left: '3.4cm',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -97,10 +97,12 @@ const Events = () => {
           </div>
       </div>
       <div className='Cybercon-Border'></div>
-         <div className='Cybercon-Title'>
-         <p className='Cybercon'>Cybercon-2023</p>
+         
+         <div className='Cybercon-Container'>
+         <p className='Cybercon-Title'>Cybercon-2023</p>
+         <div className='Cybercon-Border-2'></div>
       </div>
-      <div className='Cybercon-Border-2'></div>
+     
         
      
      
@@ -110,10 +112,12 @@ const Events = () => {
           </div>
       </div>
       <div className="Tinkering-Ep2-Border"></div>
-        <div className='Tinkering-101-ep2-Title'>
-        <p className='Tinkering-101-ep2'>Tinkering-101 Episode-2</p>
-       </div>
+        
+        <div className='Tinkering-Ep2-Container'>
+        <p className='Tinkering-101-ep2-Title'>Tinkering-101 Episode-2</p>
         <div className="Tinkering-Ep2-Border-2"></div>
+       </div>
+        
         
 
         
@@ -123,9 +127,10 @@ const Events = () => {
           </div>
       </div>
       <div className='Tinkering-Ep1-Border'></div>
-      <div className='Tinkering-Ep1-Border-2'></div>
-       <div className='Tinkering-101-ep-Title'>
-        <p className='Tinkering-101-ep1'>Tinkering-101 Episode-1</p>
+      
+       <div className='Tinkering-101-ep-Container'>
+        <p className='Tinkering-101-ep-Title'>Tinkering-101 Episode-1</p>
+        <div className='Tinkering-Ep1-Border-2'></div>
       </div>
 
       
@@ -136,11 +141,10 @@ const Events = () => {
           </div>
       </div>
       <div className="TN-Border"></div>
-      <div className="TN-Border-2"></div>
+     
       <div className='TN-Container'>
-      <div className='Tinkerers-Night-Title'>
-        <p className='Tinkerers-Night'>Tinkerers Night</p>
-      </div>
+        <p className='Tinkerers-Night-Title'>Tinkerers Night</p>
+        <div className="TN-Border-2"></div>
       </div>
       
     </EventWrapper>
@@ -408,42 +412,38 @@ border-radius: 84px;
 }
 .Cybercon-Border{
 box-sizing: border-box;
-position: absolute;
+position: relative;
 // width: 1053px;
 width:72.5%;
 // height: 612px;
 left: 120px;
-top: 961px;
+top: -555px;
 border: 6px solid #6C10C6;
 border-radius: 84px;
 z-index:-1;
 aspect-ratio:1.72;
 }
 .Cybercon-Border-2{
-position: absolute;
+position: relative;
 width: 631px;
 height: 159px;
 left: -174px;
-top: 1524px;
+top: 455px;
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 79.5px;
 aspect-ratio:3.96;
 }
 .Cybercon-Title{
-  position: absolute;
+  position: relative;
   width: 646px;
   height: 135px;
   left: -174px;
-  top: 1524px;
+  top: 600px;
   z-index:1;
   background: #8C3FD7;
   border-radius: 67.5px;
   aspect-ratio:4.78;
-}
-.Cybercon{
-  left:5cm;
-  top:1cm;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -451,7 +451,11 @@ aspect-ratio:3.96;
   line-height: 58px;
   color: #FFFFFF;
   padding-top:35px;
-  padding-left:200px;
+  padding-left:200px
+}
+.Cybercon-Container{
+  position:relative;
+  bottom:1200px;
 }
 @media (max-width: 767px) {
   .Cybercon-Border-2 {
@@ -564,24 +568,14 @@ aspect-ratio:3.96;
 
 
 
-.Tinkering-Ep2-Img{
-  position: absolute;
-width: 1051px;
-height: 611px;
-left: 129px;
-top: 1881px;
-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-border-radius: 84px;
-
-}
 .Tinkering-Ep2-Border{
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   // width: 1051px;
   // height: 611px;
   width:72.5%;
   left: 114px;
-  top: 1870px;
+  top: -1200px;
   border: 6px solid #6C10C6;
   border-radius: 84px;
   z-index:-1;
@@ -592,25 +586,21 @@ position: absolute;
 width: 812px;
 height: 159px;
 left: 750px;
-top: 2423px;
+top: 2440px;
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 107.5px;
 }
 .Tinkering-101-ep2-Title{
- position: absolute;
+ position: relative;
   width: 60%;
   // height: 135px;
   left: 720px;
-  top: 2423px;
+  top: -1250px;
   background: #8C3FD7;
   border-radius: 107.5px;
   z-index:1;
   aspect-ratio:6.01;
-  }
-.Tinkering-101-ep2{
-  left:15cm;
-  top:1cm;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -619,6 +609,9 @@ border-radius: 107.5px;
   color: #FFFFFF;
   padding-top:35px;
   padding-left:80px;
+  }
+.Tinkering-101-ep2-container{
+    position:relative;
  }
  @media (max-width: 767px) {
   .Tinkering-Ep2-Border-2{
@@ -676,23 +669,26 @@ border-radius: 107.5px;
 }
 .Tinkering-Ep1-Border{
 box-sizing: border-box;
-position: absolute;
+position: relative;
 // width: 1060px;
 // height: 616px;
 width:72.5%;
 left: 116px;
-top: 2829px;
+top: -1655px;
 border: 6px solid #6C10C6;
 border-radius: 84px;
 z-index:-1;
 aspect-ratio:1.72;
 }
+Tinkering-101-ep-Container{
+  position:relative;
+}
 .Tinkering-Ep1-Border-2{
-position: absolute;
+position: relative;
 width: 789px;
 height: 159px;
 left: -172px;
-top: 3387px;
+top: -1700px;
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 107.5px;
@@ -704,13 +700,10 @@ border-radius: 107.5px;
   width: 813px;
   height: 135px;
   left: -172px;
-  top: 3387px;
+  top: 3357px;
   z-index:1;
   background: #8C3FD7;
   border-radius: 107.5px;
-  
-}
-.Tinkering-101-ep1{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -771,7 +764,7 @@ border-radius: 107.5px;
   // height: 611px;
   width:72.5%;
   left: 114px;
-  top: 3822px;
+  top: 3700px;
   
   border: 6px solid #6C10C6;
   border-radius: 84px;
@@ -779,11 +772,11 @@ border-radius: 107.5px;
   aspect-ratio:1.72;
 }
 .TN-Border-2{
-position: absolute;
+position:absolute;
 width: 812px;
 height: 159px;
 left: 780px;
-top: 4365px;
+top: -1565px;
 background: #6C10C6;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 border-radius: 107.5px;
@@ -793,26 +786,26 @@ border-radius: 107.5px;
   position:relative;
 }
 .Tinkerers-Night-Title{
+  position:absolute;
   padding-right: 20px;
   width: 812px;
+  top:-1565px;
   height: 135px;
   background: #8C3FD7;
   border-radius: 67.5px;
-  margin-top: 91cm;
+  // margin-top: 91cm;
   margin-left:20cm;
   padding-left:26px;
   padding-top:30px;
   z-index:1;
-}
-.Tinkerers-Night{
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
   color: #FFFFFF;
-  padding-top:10px;
-  padding-left:20px;
+  padding-top:4px;
+  padding-left:50px;
   z-index:1;
 }
 @media (max-width: 767px) {
@@ -847,6 +840,7 @@ border-radius: 107.5px;
     left: 10%;
     padding-top:-5%;
   }
+
 
 }
 `;
