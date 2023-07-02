@@ -56,13 +56,16 @@ const Contacts = () => {
         {
           method: "POST",
           body: new FormData(formRef.current),
-        }).then(res => console.log(res.status), setMessage({ ...message, send: true })).catch(err => console.log(err))
+        }).then(res => setMessage({name:"",email:'',message:'',send: true }),setTimeout(() => {
+          setMessage({name:"",email:'',message:'', send: false })
+        }, 8000)).catch(err => console.log(err))
   }
 
   // Confirmation Message
   const confirm = (
     <div className='send-confirm'>
-      Thank you for contacting us
+      <p>Thanks for filling the form</p>
+      <p>We will reach out to you soon!</p>
     </div>
   )
 
@@ -97,63 +100,64 @@ const Contacts = () => {
     useEffect(() => {
       const messageElem = messageRef.current
       gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
-        autoAlpha: 1, translateX: '0', duration: 3, scrollTrigger: {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
           trigger: messageElem,
           start: "50px 45%",
           end: "+=1290",
-          toggleActions: "restart complete none none"
+          /* toggleActions: "restart complete none none" */
         }
       })
       const mapElem = mapRef.current
       gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
-        autoAlpha: 1, translateX: '0', duration: 3, scrollTrigger: {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
           trigger: mapElem,
           start: "50px 45%",
           end: "+=1250",
-          toggleActions: "restart complete none none"
+          /* toggleActions: "restart complete none none" */
         }
       })
-    }, [])} 
-    else if (screenSize.width <=770) {
-      useEffect(() => {
-        const messageElem = messageRef.current
-        gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
-          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
-            trigger: messageElem,
-            start: "-55% 50%",
-            end: "+=1280",
-            toggleActions: "restart complete none none"
-          }
-        })
-        const mapElem = mapRef.current
-        gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
-          autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
-            trigger: mapElem,
-            start: "-65% 50%",
-            end: "+=1250",
-            toggleActions: "restart complete none none"
-          }
-        })
-      }, [])
-    }
-    else {
+    }, [])
+  }
+  else if (screenSize.width <= 770) {
     useEffect(() => {
       const messageElem = messageRef.current
       gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
-        autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
           trigger: messageElem,
-          start: "-60% 50%",
-          end: "+=1320",
-          toggleActions: "restart complete none none"
+          start: "-55% 50%",
+          end: "+=1280",
+          /* toggleActions: "restart complete none none" */
         }
       })
       const mapElem = mapRef.current
       gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
-        autoAlpha: 1, translateX: '0', duration: 4, scrollTrigger: {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
+          trigger: mapElem,
+          start: "-65% 50%",
+          end: "+=1250",
+          /* toggleActions: "restart complete none none" */
+        }
+      })
+    }, [])
+  }
+  else {
+    useEffect(() => {
+      const messageElem = messageRef.current
+      gsap.fromTo(messageElem, { autoAlpha: 0, translateX: '10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
+          trigger: messageElem,
+          start: "-60% 50%",
+          end: "+=1320",
+          /* toggleActions: "restart complete none none" */
+        }
+      })
+      const mapElem = mapRef.current
+      gsap.fromTo(mapElem, { autoAlpha: 0, translateX: '-10%' }, {
+        autoAlpha: 1, translateX: '0', duration: 2, scrollTrigger: {
           trigger: mapElem,
           start: "-60% 50%",
           end: "+=1300",
-          toggleActions: "restart complete none none"
+          /* toggleActions: "restart complete none none" */
         }
       })
     }, [])
@@ -378,7 +382,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3.5rem;
     line-height: 39px;
   }
 
@@ -535,12 +539,41 @@ const ContactsWrapper = styled.section`
   }
 
   .send-confirm {
-    color: yellowgreen;
-    font-size: 1.5rem;
+    color: #4CAF50;
+    font-size: 1.7rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 1rem;
+    visibility: hidden;
+    animation-name:confirm;
+    animation-duration: 4s;
+    transition: 2s;
+    margin-bottom: -6rem;
   }
+
+  .send-confirm p{
+    margin: 0;
+    
+  }
+  @keyframes confirm {
+  0% {
+    visibility:hidden;
+    opacity:0;
+    margin-bottom: -6rem;
+  }
+  50% {
+    visibility:visible;
+    margin-bottom: 0;
+    opacity:1;
+  }
+  100% {
+    visibility:hidden;
+    margin-bottom: -6rem;
+    opacity: 0;
+  }
+}
 
   @media (max-width: 1400px){
     .circle4,.circle5 {
@@ -584,7 +617,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3.2rem;
     line-height: 39px;
     width: auto;
     height: auto;
@@ -638,11 +671,13 @@ const ContactsWrapper = styled.section`
       }
 
       .section-message {
-        width: 80vw;
+        width: 84vw;
         order:1;
       }
       .section-message-box {
         width: 100%;
+        /* padding:3.5rem 3rem;
+        border-radius: 6rem; */
       }
       .section-map {
         width: 100%;
