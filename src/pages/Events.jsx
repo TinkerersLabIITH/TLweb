@@ -464,13 +464,14 @@ aspect-ratio:3.96;
     width: 100%;
     left: 0;
    aspect-ratio: auto;
+   padding-top:5%;
   }
   
   .Cybercon {
     font-size: 24px;
     line-height: 30px;
-    padding-top: 20px;
-    padding-right: 60px;
+    padding-top: 4%;
+    padding-right: 10%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -482,11 +483,9 @@ aspect-ratio:3.96;
   .Cybercon-Title {
     width: 80%;
     left: 10%;
+    padding-top:20px;
+  }
 
-  }
-  .Cybercon{
-    padding-left: 10px;
-  }
 }
 
 
@@ -501,26 +500,26 @@ aspect-ratio:3.96;
   overflow: hidden;
   transition: width 0.5s ease;
   z-index:0.5;
+  
+  .Effect:before,
+  .Effect:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // border-radius:67.5px;
+  }
+  
+  .Effect:after {
+    background: transparentize(#031625, 0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
 }
-
-.Effect:before,
-.Effect:after {
-  transform: translate3d(0, 0, 0);
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  // border-radius:67.5px;
-}
-
-.Effect:after {
-  background: transparentize(#031625, 0.15);
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
 .Effect:before {
   background: rgba(104, 50, 172, 0.6); 
   z-index: 1;
@@ -629,29 +628,27 @@ border-radius: 107.5px;
   padding-left:80px;
  }
  @media (max-width: 767px) {
-  .Tinkering-Ep2-Border-2 {
+  .Tinkering-Ep2-Border-2{
     width: 100%;
-    height: auto;
+    height:auto;
     left: 0;
-   
   }
   
-  .Tinkering-101-ep2-Title {
+  .Tinkering-101-ep2-Title{
     width: 100%;
     left: 0;
-    
-    aspect-ratio: auto;
+  height:auto;
   }
   
   .Tinkering-101-ep2 {
     font-size: 24px;
     line-height: 30px;
     padding-top: 20px;
-    padding-left: 10px;
+    padding-right: 60px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .Tinkering-Ep2-Border-2 {
+  .Tinkering-Ep2-Border-2{
     width: 90%;
     left: 5%;
   }
@@ -659,8 +656,13 @@ border-radius: 107.5px;
   .Tinkering-101-ep2-Title {
     width: 80%;
     left: 10%;
+
+  }
+  .Tinkering-101-ep2{
+    padding-left: 10px;
   }
 }
+
 
 
 
@@ -730,39 +732,36 @@ border-radius: 107.5px;
     width: 100%;
     height: auto;
     left: 0;
-    
   }
   
-  .Tinkering-101-ep-Title {
+  .Tinkering-101-ep-Title{
     width: 100%;
     left: 0;
-
-    aspect-ratio: auto;
+   aspect-ratio: auto;
+   padding-top:5%;
   }
   
   .Tinkering-101-ep1 {
     font-size: 24px;
     line-height: 30px;
-    padding-top: 20px;
-    padding-right: 60px;
+    padding-top: 4%;
+    padding-right: 10%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .Tinkering-Ep1-Border-2{
     width: 90%;
     left: 5%;
-    
   }
   
   .Tinkering-101-ep-Title {
     width: 80%;
     left: 10%;
+    padding-top:-5%;
+  }
 
-  }
-  .Tinkering-101-ep1 {
-    padding-left: 10px;
-  }
 }
+
 
 
 
@@ -822,5 +821,39 @@ border-radius: 107.5px;
   padding-top:10px;
   padding-left:20px;
   z-index:1;
+}
+@media (max-width: 767px) {
+  .TN-Border-2{
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  
+  .Tinkerers-Night-Title{
+    width: 100%;
+    left: 0;
+   aspect-ratio: auto;
+   padding-top:5%;
+  }
+  
+  .Tinkerers-Night{
+    font-size: 24px;
+    line-height: 30px;
+    padding-top: 4%;
+    padding-right: 10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .TN-Border-2{
+    width: 90%;
+    left: 5%;
+  }
+  
+  .Tinkerers-Night-Title {
+    width: 80%;
+    left: 10%;
+    padding-top:-5%;
+  }
+
 }
 `;
