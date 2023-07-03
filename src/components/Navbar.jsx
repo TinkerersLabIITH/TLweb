@@ -10,50 +10,52 @@ const Navbar = () => {
   };
 
   return (
-    <Nav>
-      <Logo>
-        <img src="./images/LogoNav.svg" alt="" />
-      </Logo>
-      <NavIcon onClick={toggleMenu} className={showMenu ? "active" : ""}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </NavIcon>
-      <NavMenu showMenu={showMenu} className={showMenu ? "active" : ""}>
-        <NavList>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/">
-              Home
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/team">
-              Team
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/events">
-              Events
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/inventory">
-              Inventory
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/projects">
-              Projects
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink onClick={toggleMenu} to="/contacts">
-              Contacts
-            </NavLink>
-          </NavItem>
-        </NavList>
-      </NavMenu>
-    </Nav>
+    <div className="nav-container">
+      <Nav>
+        <Logo>
+          <img src="./images/LogoNav.svg" alt="" />
+        </Logo>
+        <NavIcon onClick={toggleMenu} className={showMenu ? "active" : ""}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </NavIcon>
+        <NavMenu showMenu={showMenu} className={showMenu ? "active" : ""}>
+          <NavList>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/">
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/team">
+                Team
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/events">
+                Events
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/inventory">
+                Inventory
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/projects">
+                Projects
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={toggleMenu} to="/contacts">
+                Contacts
+              </NavLink>
+            </NavItem>
+          </NavList>
+        </NavMenu>
+      </Nav>
+    </div>
   );
 };
 
@@ -70,6 +72,9 @@ const Logo = styled.div`
   font-weight: bold;
   font-size: 24px;
   padding-left: 5rem;
+  @media (max-width: 600px) {
+    padding-left: 0.75rem;
+  }
 `;
 
 const NavIcon = styled.div`

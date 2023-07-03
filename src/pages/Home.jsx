@@ -13,18 +13,6 @@ const erasingDelay = 100; // Delay between each erased letter
 const Home = () => {
   return (
     <Homestyled>
-      <motion.div
-        initial={{ y: 0, opacity: 0, scale: 0.5 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="ellipse1"
-      />
-      <motion.div
-        initial={{ y: 0, opacity: 0, scale: 0.5 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="ellipse2"
-      />
       <motion.div whileHover={{ scale: 1.5 }} className="circle2" />
       <motion.div whileHover={{ scale: 1.5 }} className="circle3" />
       <div className="container">
@@ -266,20 +254,6 @@ const Homestyled = styled.section`
 
     color: #ffffff;
   }
-  .ellipse2 {
-    position: absolute;
-    width: 33vw;
-    height: 35vw;
-    left: 0;
-    top: -18vw;
-
-    background: radial-gradient(
-        40.83% 40.83% at 50% 50%,
-        rgba(0, 224, 255, 0.5) 0%,
-        rgba(51, 182, 255, 0) 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  }
 
   .circle1 {
     position: absolute;
@@ -289,21 +263,6 @@ const Homestyled = styled.section`
     border-radius: 50%;
     left: 8rem;
     top: 12rem;
-  }
-
-  .ellipse1 {
-    position: absolute;
-    width: 40vw;
-    height: 45vw;
-    left: -18vw;
-    top: -19vw;
-
-    background: radial-gradient(
-        40.83% 40.83% at 50% 50%,
-        rgba(108, 16, 198, 0.5) 0%,
-        rgba(186, 104, 200, 0) 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   }
   .circle2 {
     position: absolute;

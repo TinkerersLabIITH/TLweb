@@ -1,6 +1,7 @@
 import styles from "../styles/Elastic.module.css";
-import ImageGalery from "react-image-gallery";
+import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import styled from "styled-components";
 
 const images = [
   {
@@ -27,10 +28,41 @@ const images = [
 
 export default function ImgGallery() {
   return (
-    <div className={styles.contimg}>
-      <div className={styles.imggal}>
-        <ImageGalery showThumbnails={false} items={images} />
+    <ImageScrollStuled>
+      <div className="contimg">
+        <div className="imggal">
+          <ImageGallery
+            showNav={true}
+            showPlayButton={false}
+            showFullscreenButton={false}
+            showThumbnails={false}
+            items={images}
+          />
+        </div>
       </div>
-    </div>
+    </ImageScrollStuled>
   );
 }
+
+const ImageScrollStuled = styled.section`
+  .contimg {
+    margin-top: 25rem;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+    width: 100%;
+  }
+
+  .imggal {
+    width: 70%;
+    margin-left: 15%;
+
+    @media (max-width: 900px) {
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+  .image-gallery-slide .image-gallery-image {
+    border-radius: 30px;
+  }
+`;
