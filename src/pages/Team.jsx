@@ -16,7 +16,7 @@ const Team = () => {
       <div className='circle3' />
       <div className='circle4' />
       <div className='circle5' />
-      <div className="container grid grid-two-column">
+      <div className="container grid grid-two-column" id="container">
         <div className="section-hero-data">
           <h2 className='hero-heading'>Our Team</h2>
           <h3 className='hero-tag'>Tinkerers' Lab IITH</h3>
@@ -71,10 +71,10 @@ const Team = () => {
               <li>ARSH SRIVASTAVA</li>
               <li>MOHAMED KAIF</li>
               <li>AJAY KRISHNAN K</li>
-              <li>SATPUTE ANIKET TUKARAM</li>
+              <li>ANIKET TUKARAM</li>
               <li>DEEPSHIKHA</li>
               <li>KASI DHANVI</li>
-              <li>HIMANSHU SHEKHAR MAHARAJ</li>
+              <li>HIMANSHU SHEKHAR </li>
               <li>ARUGONDA SRIKAR</li>
               <li>SHASHANK SINGH</li>
               <li>MEDIKONDA SREEKAR</li>
@@ -94,7 +94,7 @@ const Team = () => {
               <li>VISHAL VIJAY DEVADIGA</li>
               <li>SWAPNIL BAG</li>
               <li>SHIRSENDU PAL</li>
-              <li>REDDICHARLA NAGA GIRI VARDHAN</li>
+              <li> NAGA GIRI VARDHAN</li>
               <li>ISHAAN JAIN</li>
               <li>GITANSHU ARORA</li>
             </ul>
@@ -170,7 +170,6 @@ export default Team;
 
 const TeamWrapper = styled.section`
   padding: 9rem 0;
-
   .circle1{
     position: absolute;
     background-color: #6C10C6;
@@ -180,7 +179,6 @@ const TeamWrapper = styled.section`
     left: 8rem;
     top: 12rem;
   }
-
   .circle2{
     position: absolute;
     background-color: #6C10C6;
@@ -190,7 +188,6 @@ const TeamWrapper = styled.section`
     left: 8rem;
     top: 60rem;
   }
-
   .circle3{
     position: absolute;
     background-color: #6C10C6;
@@ -200,7 +197,6 @@ const TeamWrapper = styled.section`
     left: 12rem;
     top: 68rem;
   }
-
   .circle4{
     position: absolute;
     background-color: #6C10C6;
@@ -210,7 +206,6 @@ const TeamWrapper = styled.section`
     left: 74rem;
     top: 20rem;
   }
-
   .circle5{
     position: absolute;
     background-color: #6C10C6;
@@ -220,13 +215,11 @@ const TeamWrapper = styled.section`
     left: 78rem;
     top: 28rem;
   }
-
   .section-hero-data{
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
   .hero-bottom {
     padding: 50px;
     height: 150px;
@@ -239,11 +232,10 @@ const TeamWrapper = styled.section`
     margin-top:250px;
     margin-left: 15rem;
   }
-
   .hero-heading{
     position: absolute;
-    /* width: 431px; */
-    /* height: 170px; */
+    // width: 431px; 
+    // height: 170px;
     left: 15rem;
     top: 310px;
       
@@ -251,37 +243,31 @@ const TeamWrapper = styled.section`
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
-    /* line-height: 85px; */
+     line-height: 85px;
   }
-
   .hero-tag{
     position: absolute;
     width: 1008px;
     height: 580px;
     left: 15rem;
     top: 406px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
   }
-
   .section-hero-image{
     display: flex;
     justify-content: end;
     align-items: center;
   }
-
   picture{
     text-align: end;
   }
-
   .hero-img{
     width: 100%;
   }
-
   .convener{
     display: flex;
     flex-direction: column;
@@ -300,20 +286,18 @@ const TeamWrapper = styled.section`
       -webkit-animation: slide-top 1s ease-in reverse ;
       animation: slide-top 1s ease-in reverse ;
       
-
     }
-
     img{
       width: 262.292px;
       height: 280px;
     }
   }
-
   .secretaries{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-between; 
+    margin:30px;
     
     .position{
       padding: 7rem 0;
@@ -326,25 +310,20 @@ const TeamWrapper = styled.section`
       -webkit-animation: slide-top 2s ease-in reverse ;
       animation: slide-top 2s ease-in reverse ;
       
-
-
     }
-
     .img-secs{
       display: flex;
       flex-direction: row;
       margin-bottom:40px;
+      justify-content: center;
       animation: fadeIn ease 5s;
       -webkit-animation: fadeIn ease 5s;
       -moz-animation: fadeIn ease 5s;
       -o-animation: fadeIn ease 5s;
       -ms-animation: fadeIn ease 5s;
-
-
       
     }
   }
-
   .cores{
     display: flex;
     flex-direction: column;
@@ -363,13 +342,10 @@ const TeamWrapper = styled.section`
       font-family: Inter;
       font-weight: 700;
     }
-
     .cores-section{
       width: 100%;
       display: flex;
       justify-content: space-around;
-
-
       .core{
         
         width: 323px;
@@ -377,7 +353,6 @@ const TeamWrapper = styled.section`
         left: 479px;
         top: 2487px;
         margin-bottom:200px;
-
         .position{
           width:auto;
           margin-left:0px;  
@@ -401,15 +376,12 @@ const TeamWrapper = styled.section`
           -webkit-animation: slide-top 4s ease-in reverse ;
           animation: slide-top 4s ease-in reverse ;
          
-
         }
       }
-
       
     
     } 
   }
-
  @-webkit-keyframes slide-top {
    0% {
      -webkit-transform: translateY(0);
@@ -430,28 +402,22 @@ const TeamWrapper = styled.section`
              transform: translateY(-100px);
    }
  }
-
-
  @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-moz-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-o-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -466,7 +432,6 @@ const TeamWrapper = styled.section`
     left: 10rem;
     top: 190rem;
   }
-
   .circle7{
     position: absolute;
     background-color: #6C10C6;
@@ -476,7 +441,6 @@ const TeamWrapper = styled.section`
     left: 15rem;
     top: 195rem;
   }
-
   .circle8{
     position: absolute;
     background-color: #6C10C6;
@@ -486,7 +450,6 @@ const TeamWrapper = styled.section`
     left: 200rem;
     top: 90rem;
   }
-
   .circle9{
     position: absolute;
     background-color: #6C10C6;
@@ -496,51 +459,82 @@ const TeamWrapper = styled.section`
     left: 195rem;
     top: 100rem;
   }
-
-  
-  
-  
-
-
-    // @media (min-width:768px){
-      
-    // }
-
-    @media (max-width: 1200px) {
-
-
+@media (max-width: 1200px) {
+       #container{
+        text-align: center;
+       }
+      .section-hero-image{
+        display:none;
+      }
       .section-hero-data{
-        margin:0;
-        width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2vh;
+      height: max-content;
+      width: 95vw;
+      margin-top: -15vh;
+      
 
-        .hero-heading {
-          top:180px;
-          font-weight: 800;
-          font-size: 50px;
-          left:50px;
-          text-align: center;
-        }
-  
+      }
+
+      .hero-heading {
+        // top:180px;
+        margin-top:60px;
+
+        // font-weight: 800;
+        // font-size: 50px;
+        // left:50px;
+        // text-align: center;
+
+        display: flex;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        width: auto;
+        height: auto;
+        font-size: 5.5rem;
+        position: unset;
+      }
+
+      
+      .hero-tag {
+        margin-top:10px;
         
-        .hero-tag {
-          top:240px;
-          font-weight: 500;
-          font-size: 30px;
-          left:30px;
-          width:auto;
-          height:auto;
-          text-align:center;
-        }
-  
-        .hero-bottom {
-          font-size:30px;
-          margin-top:120px;
-          margin-left:30px;
-          text-align: center;
-          
-        }
+        // font-weight: 500;
+        // font-size: 30px;
+        // left:30px;
+        // width:auto;
+        // height:auto;
+        // text-align:center;
+        font-family: 'Inter';
+    font-style: normal;
+    width: auto;
+    height: auto;
+    position: unset;
+    font-size: 4rem;
+    line-height: 4rem;
+      }
+
+      .hero-bottom {
+        // font-size:30px;
+        // margin-top:1px;
+        margin-left:30px;
+        margin-top:50px;
+        text-align: center; 
+
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 39px;
+    width: auto;
+    height: auto;
+    position: unset;
         
       }
+      
       .circle1 {
         display: none;
       }
@@ -556,11 +550,9 @@ const TeamWrapper = styled.section`
       .circle4 {
         display: none;
       }
-
       .circle5 {
         display: none;
       }
-
       .circle6 {
         display: none;
       }
@@ -573,13 +565,10 @@ const TeamWrapper = styled.section`
       .circle9 {
         display: none;
       }
-
       .hero-img{
         display: none;
       }
-
       
-
       .secretaries{
         
         .img-secs{
@@ -588,9 +577,7 @@ const TeamWrapper = styled.section`
           align-content: center;
           gap: 3rem;
         }
-
       }
-
       .cores{
         
         
@@ -598,7 +585,6 @@ const TeamWrapper = styled.section`
           display:flex;
           flex-wrap: wrap;
           
-
           .core{
             margin-bottom:0px;
             height:fit-content;
@@ -608,8 +594,6 @@ const TeamWrapper = styled.section`
               font-size:30px;
               margin-left:0px;
             }
-
-
             
             .name-cores{
               font-size:20px;
@@ -618,10 +602,7 @@ const TeamWrapper = styled.section`
               
             }
           }
-
         }
       }
   }
-
 `;
-
