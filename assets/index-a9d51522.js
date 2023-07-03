@@ -474,7 +474,7 @@ Error generating stack: `+s.message+`
     margin-left: 15rem;
   }
   .hero-heading{
-    position: absolute;
+    // position: absolute;
     /* width: 431px; */
     /* height: 170px; */
     left: 15rem;
@@ -487,7 +487,7 @@ Error generating stack: `+s.message+`
     /* line-height: 85px; */
   }
   .hero-tag{
-    position: absolute;
+    // position: absolute;
     width: 1008px;
     height: 580px;
     left: 15rem;
