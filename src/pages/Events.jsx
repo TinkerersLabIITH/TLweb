@@ -835,7 +835,4 @@ background: #6C10C6;
     display: none;
   }
 }
-
-
-
 `;
