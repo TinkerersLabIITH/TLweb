@@ -16,7 +16,7 @@ const Team = () => {
       <div className='circle3' />
       <div className='circle4' />
       <div className='circle5' />
-      <div className="container" id="container">
+      <div className="container grid grid-two-column" id="container">
         <div className="section-hero-data">
           <h2 className='hero-heading'>Our Team</h2>
           <h3 className='hero-tag'>Tinkerers' Lab IITH</h3>
@@ -233,9 +233,9 @@ const TeamWrapper = styled.section`
     margin-left: 15rem;
   }
   .hero-heading{
-    // position: absolute;
-    /* width: 431px; */
-    /* height: 170px; */
+    position: absolute;
+    // width: 431px; 
+    // height: 170px;
     left: 15rem;
     top: 310px;
       
@@ -243,10 +243,10 @@ const TeamWrapper = styled.section`
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
-    /* line-height: 85px; */
+     line-height: 85px;
   }
   .hero-tag{
-    // position: absolute;
+    position: absolute;
     width: 1008px;
     height: 580px;
     left: 15rem;
@@ -298,7 +298,6 @@ const TeamWrapper = styled.section`
     align-items: center;
     justify-content: space-between; 
     margin:30px;
-
     
     .position{
       padding: 7rem 0;
@@ -460,9 +459,7 @@ const TeamWrapper = styled.section`
     left: 195rem;
     top: 100rem;
   }
-
 @media (max-width: 1200px) {
-
        #container{
         text-align: center;
        }
@@ -470,36 +467,74 @@ const TeamWrapper = styled.section`
         display:none;
       }
       .section-hero-data{
-        justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2vh;
+      height: max-content;
+      width: 95vw;
+      margin-top: -15vh;
       
-        .hero-heading {
-          top:180px;
-          font-weight: 800;
-          font-size: 50px;
-          left:50px;
-          text-align: center;
-        }
-  
+
+      }
+
+      .hero-heading {
+        // top:180px;
+        margin-top:60px;
+
+        // font-weight: 800;
+        // font-size: 50px;
+        // left:50px;
+        // text-align: center;
+
+        display: flex;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        width: auto;
+        height: auto;
+        font-size: 5.5rem;
+        position: unset;
+      }
+
+      
+      .hero-tag {
+        margin-top:10px;
         
-        .hero-tag {
-          top:240px;
-          font-weight: 500;
-          font-size: 30px;
-          left:30px;
-          width:auto;
-          height:auto;
-          text-align:center;
-        }
-  
-        .hero-bottom {
-          font-size:30px;
-          margin-top:120px;
-          margin-left:30px;
-          text-align: center;
-          
-        }
+        // font-weight: 500;
+        // font-size: 30px;
+        // left:30px;
+        // width:auto;
+        // height:auto;
+        // text-align:center;
+        font-family: 'Inter';
+    font-style: normal;
+    width: auto;
+    height: auto;
+    position: unset;
+    font-size: 4rem;
+    line-height: 4rem;
+      }
+
+      .hero-bottom {
+        // font-size:30px;
+        // margin-top:1px;
+        margin-left:30px;
+        margin-top:50px;
+        text-align: center; 
+
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 39px;
+    width: auto;
+    height: auto;
+    position: unset;
         
       }
+      
       .circle1 {
         display: none;
       }

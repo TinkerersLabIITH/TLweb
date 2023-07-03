@@ -305,7 +305,7 @@ const EventWrapper = styled.section`
   right:4%;
   }
   .decoration-3{
-    width: 120%;
+  width: 120%;
   height: 100%;
   background: #6C10C6;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
