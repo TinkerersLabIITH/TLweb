@@ -6,14 +6,50 @@ import TinkeringEp2 from "../images/tinkering101ep2.png"
 import TinkeringEp1 from "../images/tinkering101ep1.png"
 import TinkerersNight from "../images/tinkerersnight.png"
 const Events = () => {
-  const [showText, setShowText] = useState(false);
-    const handleMouseEnter = () => {
-      setShowText(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setShowText(false);
-    };
+  const divStyle = {
+    backgroundImage: `url(${Cybercon})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'relative',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const EP2Image={
+    backgroundImage: `url(${TinkeringEp2})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'relative',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const EP1Image={
+    backgroundImage: `url(${TinkeringEp1})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'relative',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
+  const TNightIMG={
+    backgroundImage: `url(${TinkerersNight})`,
+    transform: 'translate3d(0, 0, 0)',
+    position: 'relative',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'filter 0.5s ease',
+    aspectRatio: '1.72',
+    borderRadius:'67.5px'
+  }
   return (
     <EventWrapper>
        <div className='circle1' />
@@ -29,10 +65,10 @@ const Events = () => {
       <div className='circle11'/>
       <div className='circle12'/>
       <div className='circle13'/>
-        <div className='circle14'/>
-        <div className='circle15'/>
-        <div className='circle16'/>
-        <div className='circle17'/>
+      <div className='circle14'/>
+      <div className='circle15'/>
+      <div className='circle16'/>
+      <div className='circle17'/>
         <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <h2 className='hero-heading'>Events</h2>
@@ -45,39 +81,61 @@ const Events = () => {
           </picture>
         </div>
       </div>
-      
-      <img src={Cybercon} className="Cybercon-Image"/>
-      <div className='Cybercon-Border'></div>
-        <div className='Cybercon-Title'>
-        <p className='Cybercon'>Cybercon-2023</p>
+    
+  <div className="flex-container">
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={divStyle}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className="Left-Img">
+        <div className="image-name">CyberCon-2023</div>
+        <div className="decoration"></div>
+        </div>
       </div>
-      <div className='Cybercon-Border-2'></div>
-        
-        
-      <img className="Tinkering-Ep2-Img" src={TinkeringEp2}></img>
-        <div className="Tinkering-Ep2-Border"></div>
-        <div className='Tinkering-101-ep2-Title'>
-        <p className='Tinkering-101-ep2'>Tinkering-101 Episode-2</p>
-       </div>
-        <div className="Tinkering-Ep2-Border-2"></div>
-        
-        <img className='Tinkering-Ep1-Image' src={TinkeringEp1}/>
-      <div className='Tinkering-Ep1-Border'></div>
-      <div className='Tinkering-Ep1-Border-2'></div>
-       
-      <img className="TN-Night" src={TinkerersNight}/>
-      <div className='Tinkering-101-ep-Title'>
-        <p className='Tinkering-101-ep1'>Tinkering-101 Episode-1</p>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={EP2Image}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className='Right-Img'>
+        <div className="image-name-2">Tinkering-101-Episode-02</div>
+        <div className="decoration-2"></div>
+        </div>
       </div>
-      <div className="TN-Border"></div>
-      <div className="TN-Border-2"></div>
-      
-     <div className='TN-Container'>
-      <div className='Tinkerers-Night-Title'>
-        <p className='Tinkerers-Night'>Tinkerers Night</p>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={EP1Image}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className="Left-Img">
+        <div className="image-name-3">Tinkering-101-Episode-01</div>
+        <div className="decoration-3"></div>
+        </div>
       </div>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={TNightIMG}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className='Right-Img'>
+        <div className="image-name-4">Tinkerers-Night</div>
+        <div className="decoration-4"></div>
+        </div>
       </div>
-      
+    </div>
+  </div>
     </EventWrapper>
   )
 }
@@ -96,7 +154,220 @@ const EventWrapper = styled.section`
     left: 8rem;
     top: 12rem;
   }
+ 
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:15rem 0;
+    gap:25%;
+   
+  }
 
+  .flex-item {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    width:75%;
+  }
+
+  .Right-Img {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    left:50%;
+     
+    
+  }
+  .Left-Img{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    right:50%;
+  }
+
+  .image-name {
+    align-items:center;
+    position: relative;
+    width: 100%;
+    height: 135px;
+    bottom:6vh;
+    z-index: 1;
+    background: #8C3FD7;
+    border-radius: 67.5px;
+    aspect-ratio: 4.78;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 58px;
+    color: #FFFFFF;
+    padding-top: 35px;
+    padding-left: 20%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .image-name-2 {
+    align-items:center;
+    position: relative;
+    width: 120%;
+    height: 135px;
+    bottom:60px;
+    z-index: 1;
+    background: #8C3FD7;
+    border-radius: 67.5px;
+    aspect-ratio: 4.78;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    padding-top: 5%;
+    padding-right:8%;
+    text-align: left;
+    margin-bottom: 20px;
+    right:18%;
+    padding-left:3%;
+  }
+  .image-name-3{
+  align-items:center;
+  position: relative;
+  width: 120%;
+  height: 135px;
+  bottom:20px;
+  z-index: 1;
+  background: #8C3FD7;
+  border-radius: 67.5px;
+  aspect-ratio: 4.78;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  padding-top: 6%;
+  padding-left:15%;
+  text-align: left;
+  margin-bottom: 20px;
+  left:6%;
+  }
+  .image-name-4 {
+  align-items:center;
+  position: relative;
+  width: 100%;
+  height: 135px;
+  bottom:20px;
+  z-index: 1;
+  background: #8C3FD7;
+  border-radius: 67.5px;
+  aspect-ratio: 4.78;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  padding-top: 6%;
+  padding-left:20%;
+  text-align: left;
+  margin-bottom: 20px;
+  right:2%;
+  }
+  .decoration {
+    width: 110%;
+    height: 100%;
+    background: #6C10C6;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 79.5px;
+    aspect-ratio: 3.96;
+    position:absolute;
+    bottom:30%;
+    right:6%;
+  }
+  .decoration-2 {
+  width: 110%;
+  height: 159px;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:35%;
+  right:4%;
+  }
+  .decoration-3{
+    width: 120%;
+  height: 100%;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:10%;
+  left:2%;
+  }
+  .decoration-4{
+    width: 110%;
+    height: 100%;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:15px;
+  }
+  @media (max-width: 1200px) {
+    .flex-container {
+      padding: 10px;
+      gap: 20px;
+    }
+  
+    .flex-item {
+      width: 100%;
+    }
+  
+    .Right-Img,
+    .Left-Img {
+      left: auto;
+      right: auto;
+    }
+  
+    .image-name{
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+    }
+   
+    .image-name-3,
+    .image-name-4 {
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+      left:1%;
+    }
+    .image-name-2{
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+      left:2%;
+    }
+    .decoration,
+    .decoration-2,
+    .decoration-3,
+    .decoration-4{
+      width:auto;
+    } 
+
+  }
+  
+  
+  
+  
+  
   .circle2{
     position: absolute;
     background-color: #6C10C6;
@@ -172,7 +443,7 @@ const EventWrapper = styled.section`
   }
 
   .hero-bottom{
-    position: absolute;
+    position:  absolute;
     width: 1008px;
     height: 525px;
     left: 15rem;
@@ -184,15 +455,72 @@ const EventWrapper = styled.section`
     font-size: 32px;
     line-height: 39px;
   }
+  @media (max-width: 1200px) {
+    .section-hero-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2vh;
+      height: max-content;
+      width: 95vw;
+      margin-top: -15vh;
+    }
+
+    .hero-heading {
+      display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+    font-size: 5.5rem;
+    position: unset;
+}
+
+    .hero-tag {
+    font-family: 'Inter';
+    font-style: normal;
+    width: auto;
+    height: auto;
+    position: unset;
+    font-size: 4rem;
+    line-height: 4rem;
+    }
+
+    .hero-bottom {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 39px;
+    width: auto;
+    height: auto;
+    position: unset;
+
+    } 
+
+    .section-hero-image {
+      display: none;
+    }
+    .section-hero-data {
+        height: 80vh;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5 {
+      display: none;
+    }
+  }
 
   .section-hero-image{
     display: flex;
     justify-content: end;
     align-items: center;
   }
-
-  picture{
-    text-align: end;
+  @media (max-width: 1000px) {
+    .section-hero-image {
+      display: none;
+    }
   }
 
   .hero-img{
@@ -280,7 +608,7 @@ background: #6C10C6;
 position: absolute;
 width: 12px;
 height: 12px;
-left: 707px;
+left: 507px;
 top: 3480px;
 
 background: #6C10C6;
@@ -291,7 +619,7 @@ position: absolute;
 width: 12px;
 height: 12px;
 left: 707px;
-top: 3480px;
+top: 3180px;
 
 background: #6C10C6;
 border-radius:50%;
@@ -300,7 +628,7 @@ border-radius:50%;
 position: absolute;
 width: 20px;
 height: 20px;
-left: 63px;
+left: 103px;
 top: 3825px;
 
 background: #6C10C6;
@@ -312,7 +640,7 @@ border-radius:50%;
   width: 12px;
   height: 12px;
   left: 499px;
-  top: 4496px;
+  top: 3996px;
   border-radius:50%;
   background: #6C10C6;
   
@@ -323,262 +651,90 @@ position: absolute;
 width: 20px;
 height: 20px;
 left: 561px;
-top: 4543px;
+top: 4043px;
 border-radius:50%;
 background: #6C10C6;
 
 }
-
-.Cybercon-Image{
-      position: absolute;
-width: 1053px;
-height: 612px;
-left: 127px;
-top: 972px;
-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-border-radius: 84px;
-
+.Effect {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+ width: 72%; 
+  aspect-ratio: 1.72;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  z-index:0.5;
 }
-.Cybercon-Border{
-box-sizing: border-box;
-position: absolute;
-width: 1053px;
-height: 612px;
-left: 114px;
-top: 961px;
-border: 6px solid #6C10C6;
-border-radius: 84px;
-
-}
-.Cybercon-Border-2{
-
-position: absolute;
-width: 631px;
-height: 159px;
-left: -174px;
-top: 1524px;
-
-background: #6C10C6;
-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-border-radius: 79.5px;
-
-}
-.Cybercon-Title{
-
+.Effect:before,
+.Effect:after {
+  transform: translate3d(0, 0, 0);
+  content: '';
   position: absolute;
-  width: 646px;
-  height: 135px;
-  left: -174px;
-  top: 1524px;
-  z-index:1;
-  background: #8C3FD7;
-  border-radius: 67.5px;
-  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // border-radius:67.5px;
 }
-.Cybercon{
-  left:5cm;
-  top:1cm;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-  color: #FFFFFF;
-  padding-top:35px;
-  padding-left:200px;
+.Effect:after {
+  background: transparentize(#031625, 0.15);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.Effect:before {
+  background: rgba(104, 50, 172, 0.6); /* Replace with your desired light purple color */
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 10, 0) translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.Effect:hover {
+  width: 72.5%;
+}
+.Effect:hover:after {
+  opacity: 0;
 }
 
-
-
-
-
-
-.Tinkering-Ep2-Img{
-
-position: absolute;
-width: 1051px;
-height: 611px;
-left: 129px;
-top: 1881px;
-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-border-radius: 84px;
-
+.Effect:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
 }
-.Tinkering-Ep2-Border{
-  box-sizing: border-box;
-  position: absolute;
-  width: 1051px;
-  height: 611px;
-  left: 114px;
-  top: 1870px;
-  border: 6px solid #6C10C6;
-  border-radius: 84px;
+.Effect:hover .Content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+.Effect:hover .Effect {
+  filter: grayscale(0);
+}
+.Content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 50%; /* Adjust the vertical position to center the content */
+  opacity: 0;
+  color: white; /* Change the color to purple */
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  .circle6,
+  .circle7,
+  .circle8,
+  .circle9,
+  .circle10,
+  .circle11,
+  .circle12,
+  .circle13,
+  .circle14,
+  .circle15,
+  .circle16,
+  .circle17
+  {
+    display: none;
   }
-  .Tinkering-Ep2-Border-2{
-
-position: absolute;
-width: 812px;
-height: 159px;
-left: 750px;
-top: 2423px;
-
-background: #6C10C6;
-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-border-radius: 107.5px;
-
-  }
-.Tinkering-101-ep2-Title{
- position: absolute;
-  width: 812px;
-  height: 135px;
-  left: 720px;
-  top: 2423px;
-  background: #8C3FD7;
-  border-radius: 107.5px;
-  z-index:1;
-  }
-.Tinkering-101-ep2{
-  left:15cm;
-  top:1cm;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-  color: #FFFFFF;
-  padding-top:35px;
-  padding-left:40px;
- 
 }
-
-
-
-
-
-
-
-.Tinkering-Ep1-Image{
-
-  position: absolute;
-  width: 1046px;
-  height: 615px;
-  left: 136px;
-  top: 2847px;
-  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 84px;
-  
-  
-}
-.Tinkering-Ep1-Border{
-box-sizing: border-box;
-position: absolute;
-width: 1060px;
-height: 616px;
-left: 116px;
-top: 2829px;
-border: 6px solid #6C10C6;
-border-radius: 84px;
-
-}
-.Tinkering-Ep1-Border-2{
-position: absolute;
-width: 789px;
-height: 159px;
-left: -172px;
-top: 3387px;
-background: #6C10C6;
-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-border-radius: 107.5px;
-
-}
-.Tinkering-101-ep-Title{
-
-  position: absolute;
-  width: 813px;
-  height: 135px;
-  left: -172px;
-  top: 3387px;
-  z-index:1;
-  background: #8C3FD7;
-  border-radius: 107.5px;
-  
-}
-.Tinkering-101-ep1{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-  color: #FFFFFF;
-  padding-top:35px;
-  padding-left:200px;
-}
-
-
-
-
-
-.TN-Night{
-  position: absolute;
-  width: 1051px;
-  height: 611px;
-  left: 120px;
-  top: 3835px;
-  background: url(image.png);
-  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 84px;
-  
-}
-.TN-Border{
-
-  box-sizing: border-box;
-  
-  position: absolute;
-  width: 1051px;
-  height: 611px;
-  left: 114px;
-  top: 3822px;
-  
-  border: 6px solid #6C10C6;
-  border-radius: 84px;
-  
-}
-.TN-Border-2{
-position: absolute;
-width: 812px;
-height: 159px;
-left: 780px;
-top: 4365px;
-background: #6C10C6;
-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-border-radius: 107.5px;
-
-}
-.TN-Container{
-  position:relative;
-}
-.Tinkerers-Night-Title{
-  padding-right: 20px;
-  width: 812px;
-height: 135px;
-  background: #8C3FD7;
-  border-radius: 67.5px;
-  margin-top: 91cm;
-  margin-left:20cm;
-  padding-left:26px;
-  padding-top:30px;
-  z-index:1;
-}
-.Tinkerers-Night{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-  color: #FFFFFF;
-  padding-top:10px;
-  padding-left:20px;
-  z-index:3;
-}
-
 `;

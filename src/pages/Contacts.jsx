@@ -609,7 +609,7 @@ const ContactsWrapper = styled.section`
     width: auto;
     height: auto;
     position: unset;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 4rem;
     }
 
@@ -620,7 +620,7 @@ const ContactsWrapper = styled.section`
     font-size: 3.2rem;
     line-height: 39px;
     width: auto;
-    height: auto;
+    height: 1rem;
     position: unset;
 
     } 
