@@ -319,8 +319,8 @@ const EventWrapper = styled.section`
   }
   @media (max-width: 1200px) {
     .flex-container {
-      padding: 10px;
-      gap: 20px;
+      padding: 0%;
+      gap: 25px;;
     }
   
     .flex-item {
@@ -335,31 +335,64 @@ const EventWrapper = styled.section`
   
     .image-name{
       font-size: 32px;
-      padding-top: 5%;
-      padding-left:20%;
-      width:100%;
+      padding-top: 4%;
+      padding-left:25%;
+      width:110%;
+      height:100px;
+      top:2px;
+      left:-5%;
     }
    
-    .image-name-3,
+    .image-name-3{
+      font-size: 32px;
+      padding-top: 4.5%;
+      padding-left:14%;
+      width:110%;
+      left:-4%;
+      height:100px;
+      top:2px;
+    }
     .image-name-4 {
       font-size: 32px;
-      padding-top: 5%;
-      padding-left:20%;
-      width:100%;
-      left:1%;
+      padding-top: 4.5%;
+      padding-left:25%;
+      width:110%;
+      left:-4%;
+      height:100px;
+      top:2px;
     }
     .image-name-2{
-      font-size: 32px;
-      padding-top: 5%;
-      padding-left:20%;
-      width:100%;
-      left:2%;
+      font-size: 30px;
+      padding-top: 4%;
+      padding-left:15%;
+      width:110%;
+      left:-4%;
+      top:2px;
+      height:100px;
     }
-    .decoration,
-    .decoration-2,
-    .decoration-3,
+    .decoration{
+      width:110%;
+      height:100px;
+      top:7%;
+      left:-4%;
+    }
+    .decoration-2{
+      width:110%;
+      height:100px;
+      top:7%;
+      left:-4%;
+    }
+    .decoration-3{
+      width:110%;
+      height:100px;
+      top:7%;
+      left:-4%;
+    }
     .decoration-4{
-      width:auto;
+      width:110%;
+      height:100px;
+      top:7%;
+      left:-4%;
     } 
 
   }
