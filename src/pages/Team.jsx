@@ -481,7 +481,7 @@ const TeamWrapper = styled.section`
 
       .hero-heading {
         // top:180px;
-        margin-top:60px;
+        margin-top:70px;
 
         // font-weight: 800;
         // font-size: 50px;
@@ -500,7 +500,7 @@ const TeamWrapper = styled.section`
 
       
       .hero-tag {
-        margin-top:10px;
+        margin-top:0px;
         
         // font-weight: 500;
         // font-size: 30px;
@@ -509,19 +509,19 @@ const TeamWrapper = styled.section`
         // height:auto;
         // text-align:center;
         font-family: 'Inter';
-    font-style: normal;
-    width: auto;
-    height: auto;
-    position: unset;
-    font-size: 4rem;
-    line-height: 4rem;
+        font-style: normal;
+        width: auto;
+        height: auto;
+        position: unset;
+        font-size: 4rem;
+        line-height: 4rem;
       }
 
       .hero-bottom {
         // font-size:30px;
         // margin-top:1px;
         margin-left:30px;
-        margin-top:50px;
+        margin-top:0px;
         text-align: center; 
 
         font-family: 'Inter';
