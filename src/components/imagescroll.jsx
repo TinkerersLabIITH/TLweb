@@ -9,8 +9,8 @@ const images = [
     thumbnail: "./imagescroll/Imagescroll1.png",
   },
   {
-    original: "./imagescroll/Imagescroll2.png",
-    thumbnail: "./imagescroll/Imagescroll2.png",
+    original: "./imagescroll/Imagescroll3.png",
+    thumbnail: "./imagescroll/Imagescroll3.png",
   },
   {
     original: "./imagescroll/Imagescroll4.png",
@@ -21,8 +21,8 @@ const images = [
     thumbnail: "./imagescroll/Imagescroll5.png",
   },
   {
-    original: "./imagescroll/Imagescroll3.png",
-    thumbnail: "./imagescroll/Imagescroll3.png",
+    original: "./imagescroll/Imagescroll2.png",
+    thumbnail: "./imagescroll/Imagescroll2.png",
   },
 ];
 
@@ -63,6 +63,6 @@ const ImageScrollStuled = styled.section`
     }
   }
   .image-gallery-slide .image-gallery-image {
-    border-radius: 30px;
+    border-radius: 60px;
   }
 `;

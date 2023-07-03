@@ -1,6 +1,7 @@
 import React from "react";
 import WordAnimation from "../components/homeanimate";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const words = ["Think", "Tinker", "Transform"];
 const interval = 200; // Delay between each letter
@@ -10,15 +11,22 @@ const erasingDelay = 100; // Delay between each erased letter
 const Inventory = () => {
   return (
     <InventoryWrapper>
-      <div className="circle1" />
-      <div className="circle2" />
-      <div className="circle3" />
-      <div className="circle4" />
-      <div className="circle5" />
-      <div className="container">
+      <motion.div whileHover={{ scale: 1.5 }} className="circle1" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle2" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle3" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle4" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle5" />
+      <div whileHover={{ scale: 1.5 }} className="container">
         <div className="row">
           <div className="col-xl" id="left">
-            <h2 className="hero-heading">Inventory</h2>
+            <motion.div
+              initial={{ opacity: 0, y: "50%" }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+              transition={{ duration: 1 }}
+              className="hero-heading"
+            >
+              Inventory
+            </motion.div>
             <h3 className="hero-tag">Tinkerers’ Lab IITH</h3>
             <h4 className="hero-bottom">
               <WordAnimation
@@ -31,7 +39,10 @@ const Inventory = () => {
           </div>
           <div className="col-xl" id="right">
             <picture>
-              <img
+              <motion.img
+                initial={{ y: "20%", opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
                 src="./images/Inventory.svg"
                 alt="image"
                 className="hero-img"
@@ -189,7 +200,7 @@ const InventoryWrapper = styled.section`
       width: 100vw;
     }
 
-    .wip h2{
+    .wip h2 {
       font-size: 4rem;
       padding-bottom: 5rem;
     }

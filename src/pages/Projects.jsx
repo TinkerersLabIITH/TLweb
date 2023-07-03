@@ -1,6 +1,7 @@
 import React from "react";
 import WordAnimation from "../components/homeanimate";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const words = ["Think", "Tinker", "Transform"];
 const interval = 200; // Delay between each letter
@@ -9,15 +10,22 @@ const erasingDelay = 100; // Delay between each erased letter
 const Projects = () => {
   return (
     <ProjectWrapper>
-      <div className="circle1" />
-      <div className="circle2" />
-      <div className="circle3" />
-      <div className="circle4" />
-      <div className="circle5" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle1" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle2" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle3" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle4" />
+      <motion.div whileHover={{ scale: 1.5 }} className="circle5" />
       <div className="container">
         <div className="row">
           <div className="col-xl" id="left">
-            <h2 className="hero-heading">Projects</h2>
+            <motion.div
+              initial={{ opacity: 0, y: "50%" }}
+              animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+              transition={{ duration: 1 }}
+              className="hero-heading"
+            >
+              Tinkerers' Laboratory
+            </motion.div>
             <h3 className="hero-tag">Tinkerers’ Lab IITH</h3>
             <h4 className="hero-bottom">
               <WordAnimation
@@ -30,13 +38,26 @@ const Projects = () => {
           </div>
           <div className="col-xl" id="right">
             <picture>
-              <img
+              <motion.img
+                initial={{ y: "20%", opacity: 0, scale: 0.8 }}
+                animate={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
                 src="./images/Project1.svg"
                 alt="image"
                 className="hero-img"
               />
             </picture>
           </div>
+        </div>
+        <div className="collab-form">
+          <h3>Collab with us</h3>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            className="btn"
+          >
+            Collab
+          </motion.button>
         </div>
         <div className="wip">
           <h2>Work in Progress</h2>
@@ -52,6 +73,32 @@ const Projects = () => {
 export default Projects;
 
 const ProjectWrapper = styled.section`
+  .btn {
+    width: 200px;
+    height: 8vh;
+    a {
+      color: #fff;
+    }
+    background: #6c10c6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 46px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .collab-form h3 {
+    color: black;
+    padding-bottom: 1rem;
+  }
+
   padding: 9rem 0;
   .col-xl {
     text-align: center;
@@ -187,7 +234,7 @@ const ProjectWrapper = styled.section`
       text-align: center;
       width: 100vw;
     }
-    .wip h2{
+    .wip h2 {
       font-size: 4rem;
       padding-bottom: 5rem;
     }
