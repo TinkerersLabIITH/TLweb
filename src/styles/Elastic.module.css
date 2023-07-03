@@ -1,44 +1,12 @@
-/* Start Elastic carousel */
-.container {
-  margin: 30vh 5vw;
-  width: 90%;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.container h1 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
+.contimg {
+  margin-top: 25rem;
   text-align: center;
-
-  color: #000000;
-  padding-bottom: 20px;
-}
-
-.carousWrapper {
-  width: 90%;
-}
-.card {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 10rem;
+  width: 100%;
 }
-.title {
-  background-color: rgba(4, 4, 4, 0.228);
-  border-radius: 15px;
+
+.imggal {
+  width: 70%;
+  margin-left: 15%;
 }
-.title h3 {
-  padding: 2rem;
-  color: #fff;
-}
-.backgroundImage {
-  height: 44.44vw;
-  width: 79vw;
-  border-radius: 50px;
-  background: lightgray 50% / cover no-repeat;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25) inset;
-}
-/* End Elastic carousel */

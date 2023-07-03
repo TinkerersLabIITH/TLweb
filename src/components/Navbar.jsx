@@ -22,22 +22,34 @@ const Navbar = () => {
       <NavMenu showMenu={showMenu} className={showMenu ? "active" : ""}>
         <NavList>
           <NavItem>
-            <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+            <NavLink onClick={toggleMenu} to="/">
+              Home
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/team" onClick={toggleMenu}>Team</NavLink>
+            <NavLink onClick={toggleMenu} to="/team">
+              Team
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/events" onClick={toggleMenu}>Events</NavLink>
+            <NavLink onClick={toggleMenu} to="/events">
+              Events
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/inventory" onClick={toggleMenu}>Inventory</NavLink>
+            <NavLink onClick={toggleMenu} to="/inventory">
+              Inventory
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/projects" onClick={toggleMenu}>Projects</NavLink>
+            <NavLink onClick={toggleMenu} to="/projects">
+              Projects
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/contacts" onClick={toggleMenu}>Contacts</NavLink>
+            <NavLink onClick={toggleMenu} to="/contacts">
+              Contacts
+            </NavLink>
           </NavItem>
         </NavList>
       </NavMenu>
@@ -146,7 +158,9 @@ const NavItem = styled.li`
 
     &:hover,
     &:active {
-      color: ${({ theme }) => theme.colors.nav_color};
+      // color: ${({ theme }) => theme.colors.nav_color};
+      color: #6c10c6;
+      scale: 1.2;
     }
     color: #484848;
   }
