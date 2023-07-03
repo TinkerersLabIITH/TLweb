@@ -10,9 +10,7 @@ const Events = () => {
     backgroundImage: `url(${Cybercon})`,
     transform: 'translate3d(0, 0, 0)',
     position: 'relative',
-    width: '72.5%',
-    top: '1.8cm',
-    left: '3.4cm',
+    width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'filter 0.5s ease',
@@ -23,9 +21,7 @@ const Events = () => {
     backgroundImage: `url(${TinkeringEp2})`,
     transform: 'translate3d(0, 0, 0)',
     position: 'relative',
-    width: '72.5%',
-    top: '-15.2cm',
-    left: '3.4cm',
+    width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'filter 0.5s ease',
@@ -36,9 +32,7 @@ const Events = () => {
     backgroundImage: `url(${TinkeringEp1})`,
     transform: 'translate3d(0, 0, 0)',
     position: 'relative',
-    width: '72.5%',
-    top: '-27.2cm',
-    left: '3.4cm',
+    width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'filter 0.5s ease',
@@ -49,9 +43,7 @@ const Events = () => {
     backgroundImage: `url(${TinkerersNight})`,
     transform: 'translate3d(0, 0, 0)',
     position: 'relative',
-    width: '72.5%',
-    top: '-40cm',
-    left: '3.4cm',
+    width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'filter 0.5s ease',
@@ -90,11 +82,17 @@ const Events = () => {
         </div>
       </div>
     
-      
-      <div className='Effect' style={divStyle}>
+      {/* <div className='flex-container'>
+        <div className='flex-item'>
+           <div className='Effect' style={divStyle}>
           <div className='Content'>
              <p>ilwauefhwaiufhiuhfiuhihiu</p>
           </div>
+          </div>
+      
+        <div className='image-name'>cyberCon</div>
+        <div class="decoration"></div>
+       
       </div>
       <div className='Cybercon-Border'></div>
          
@@ -146,7 +144,61 @@ const Events = () => {
         <p className='Tinkerers-Night-Title'>Tinkerers Night</p>
         <div className="TN-Border-2"></div>
       </div>
-      
+      </div> */}
+  <div className="flex-container">
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={divStyle}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className="Left-Img">
+        <div className="image-name">CyberCon-2023</div>
+        <div className="decoration"></div>
+        </div>
+      </div>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={EP2Image}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className='Right-Img'>
+        <div className="image-name-2">Tinkering-101-Episode-02</div>
+        <div className="decoration-2"></div>
+        </div>
+      </div>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={EP1Image}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className="Left-Img">
+        <div className="image-name-3">Tinkering-101-Episode-01</div>
+        <div className="decoration-3"></div>
+        </div>
+      </div>
+    </div>
+    <div className="flex-item">
+      <div className="image">
+      <div className='Effect' style={TNightIMG}>
+      <div className='Content'>
+             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+          </div>
+          </div>
+          <div className='Right-Img'>
+        <div className="image-name-4">Tinkerers-Night</div>
+        <div className="decoration-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
     </EventWrapper>
   )
 }
@@ -165,7 +217,220 @@ const EventWrapper = styled.section`
     left: 8rem;
     top: 12rem;
   }
+ 
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:1%;
+    gap:25%;
+   
+  }
 
+  .flex-item {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    width:75%;
+  }
+
+  .Right-Img {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    left:50%;
+     
+    
+  }
+  .Left-Img{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    right:50%;
+  }
+
+  .image-name {
+    align-items:center;
+    position: relative;
+    width: 100%;
+    height: 135px;
+    bottom:6vh;
+    z-index: 1;
+    background: #8C3FD7;
+    border-radius: 67.5px;
+    aspect-ratio: 4.78;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 58px;
+    color: #FFFFFF;
+    padding-top: 35px;
+    padding-left: 20%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .image-name-2 {
+    align-items:center;
+    position: relative;
+    width: 120%;
+    height: 135px;
+    bottom:60px;
+    z-index: 1;
+    background: #8C3FD7;
+    border-radius: 67.5px;
+    aspect-ratio: 4.78;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    padding-top: 5%;
+    padding-right:8%;
+    text-align: left;
+    margin-bottom: 20px;
+    right:18%;
+    padding-left:3%;
+  }
+  .image-name-3{
+  align-items:center;
+  position: relative;
+  width: 120%;
+  height: 135px;
+  bottom:20px;
+  z-index: 1;
+  background: #8C3FD7;
+  border-radius: 67.5px;
+  aspect-ratio: 4.78;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  padding-top: 6%;
+  padding-left:15%;
+  text-align: left;
+  margin-bottom: 20px;
+  left:6%;
+  }
+  .image-name-4 {
+  align-items:center;
+  position: relative;
+  width: 100%;
+  height: 135px;
+  bottom:20px;
+  z-index: 1;
+  background: #8C3FD7;
+  border-radius: 67.5px;
+  aspect-ratio: 4.78;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+  padding-top: 6%;
+  padding-left:20%;
+  text-align: left;
+  margin-bottom: 20px;
+  right:2%;
+  }
+  .decoration {
+    width: 110%;
+    height: 100%;
+    background: #6C10C6;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 79.5px;
+    aspect-ratio: 3.96;
+    position:absolute;
+    bottom:30%;
+    right:6%;
+  }
+  .decoration-2 {
+  width: 110%;
+  height: 159px;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:35%;
+  right:1%;
+  }
+  .decoration-3{
+    width: 120%;
+  height: 100%;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:10%;
+  left:2%;
+  }
+  .decoration-4{
+    width: 110%;
+    height: 100%;
+  background: #6C10C6;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 79.5px;
+  aspect-ratio: 3.96;
+  position:absolute;
+  bottom:15px;
+  }
+  @media (max-width: 1200px) {
+    .flex-container {
+      padding: 10px;
+      gap: 20px;
+    }
+  
+    .flex-item {
+      width: 100%;
+    }
+  
+    .Right-Img,
+    .Left-Img {
+      left: auto;
+      right: auto;
+    }
+  
+    .image-name{
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+    }
+   
+    .image-name-3,
+    .image-name-4 {
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+      left:1%;
+    }
+    .image-name-2{
+      font-size: 32px;
+      padding-top: 5%;
+      padding-left:20%;
+      width:100%;
+      left:2%;
+    }
+    .decoration,
+    .decoration-2,
+    .decoration-3,
+    .decoration-4{
+      width:auto;
+    } 
+
+  }
+  
+  
+  
+  
+  
   .circle2{
     position: absolute;
     background-color: #6C10C6;
@@ -241,7 +506,7 @@ const EventWrapper = styled.section`
   }
 
   .hero-bottom{
-    position: absolute;
+    position:  absolute;
     width: 1008px;
     height: 525px;
     left: 15rem;
@@ -253,15 +518,80 @@ const EventWrapper = styled.section`
     font-size: 32px;
     line-height: 39px;
   }
+  @media (max-width: 1200px) {
+    .section-hero-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2vh;
+      height: max-content;
+      width: 95vw;
+      margin-top: -15vh;
+    }
+
+    .hero-heading {
+      display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+    font-size: 5.5rem;
+    position: unset;
+}
+
+    .hero-tag {
+    font-family: 'Inter';
+    font-style: normal;
+    width: auto;
+    height: auto;
+    position: unset;
+    font-size: 4rem;
+    line-height: 4rem;
+    }
+
+    .hero-bottom {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 39px;
+    width: auto;
+    height: auto;
+    position: unset;
+
+    } 
+
+    .section-hero-image {
+      display: none;
+    }
+    .section-hero-data {
+        height: 80vh;
+    }
+
+    .circle1, .circle2, .circle3, .circle4, .circle5 {
+      display: none;
+    }
+
+    .section-map-message {
+      height: 100vh;
+    }
+    .section-map {
+      margin: 23vh 0 0 0;
+      
+    }
+  }
 
   .section-hero-image{
     display: flex;
     justify-content: end;
     align-items: center;
   }
-
-  picture{
-    text-align: end;
+  @media (max-width: 1000px) {
+    .section-hero-image {
+      display: none;
+    }
   }
 
   .hero-img{
@@ -411,13 +741,13 @@ border-radius: 84px;
 
 }
 .Cybercon-Border{
-box-sizing: border-box;
+
 position: relative;
 // width: 1053px;
 width:72.5%;
 // height: 612px;
-left: 120px;
-top: -555px;
+left:10%;
+top: 116vh;
 border: 6px solid #6C10C6;
 border-radius: 84px;
 z-index:-1;
@@ -457,48 +787,15 @@ aspect-ratio:3.96;
   position:relative;
   bottom:1200px;
 }
-@media (max-width: 767px) {
-  .Cybercon-Border-2 {
-    width: 100%;
-    height: auto;
-    left: 0;
-  }
-  
-  .Cybercon-Title{
-    width: 100%;
-    left: 0;
-   aspect-ratio: auto;
-   padding-top:5%;
-  }
-  
-  .Cybercon {
-    font-size: 24px;
-    line-height: 30px;
-    padding-top: 4%;
-    padding-right: 10%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .Cybercon-Border-2{
-    width: 90%;
-    left: 5%;
-  }
-  
-  .Cybercon-Title {
-    width: 80%;
-    left: 10%;
-    padding-top:20px;
-  }
 
-}
-
+//how to make this page responsive ?
 
 
 
 .Effect {
   transform: translate3d(0, 0, 0);
   position: relative;
-  width: 72%;
+ width: 72%; 
   aspect-ratio: 1.72;
   color: #fff;
   overflow: hidden;
@@ -842,5 +1139,44 @@ border-radius: 107.5px;
   }
 
 
+}
+@media (max-width: 1000px) {
+  .circle6 {
+    display: none;
+  }
+  .circle7 {
+    display: none;
+  }
+  .circle8 {
+    display: none;
+  }
+  .circle9 {
+    display: none;
+  }
+
+  .circle10 {
+    display: none;
+  }
+  .circle11 {
+    display: none;
+  }
+  .circle12 {
+    display: none;
+  }
+  .circle13 {
+    display: none;
+  }
+  .circle14 {
+    display: none;
+  }
+  .circle15 {
+    display: none;
+  }
+  .circle16 {
+    display: none;
+  }
+  .circle17 {
+    display: none;
+  }
 }
 `;
