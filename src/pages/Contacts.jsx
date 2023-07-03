@@ -20,7 +20,7 @@ const Contacts = () => {
     name: '',
     email: '',
     message: '',
-    send: false
+    send: false,
   })
 
   const [warn, setWarn] = useState({
@@ -29,6 +29,9 @@ const Contacts = () => {
     message: false,
     send: false
   })
+
+  const [submitHan, setSubmitHan] = useState(false)
+
   function handleChange(event) {
     const { name, value } = event.target
     setMessage(prev => {
@@ -51,15 +54,40 @@ const Contacts = () => {
       message: message.message ? false : true,
       send: message.name && message.email && re.test(message.email) && message.message ? true : false
     }))
-    message.name && message.email && re.test(message.email) && message.message &&
-      fetch('https://script.google.com/macros/s/AKfycbweHBn46bB_ikYWUgVWtfV1S-IAB3bxLCA5eV0zHFKaDArWNECVvsr05AESUfj8A-St/exec',
-        {
-          method: "POST",
-          body: new FormData(formRef.current),
-        }).then(res => setMessage({name:"",email:'',message:'',send: true }),setTimeout(() => {
-          setMessage({name:"",email:'',message:'', send: false })
-        }, 8000)).catch(err => console.log(err))
+    message.name && message.email && re.test(message.email) && message.message && setSubmitHan(true)
+    setInterval(() => {
+      if (dot.length < 5) {
+        setDot(dot + ".")
+      }
+      else {
+        setDot(".")
+      }
+    },
+      1000)
+    message.name && message.email && re.test(message.email) && message.message && fetch('https://script.google.com/macros/s/AKfycbweHBn46bB_ikYWUgVWtfV1S-IAB3bxLCA5eV0zHFKaDArWNECVvsr05AESUfj8A-St/exec',
+      {
+        method: "POST",
+        body: new FormData(formRef.current),
+      }).then(res => setSubmitHan(false), setMessage({ name: "", email: '', message: '', send: true }), setTimeout(() => {
+        setMessage({ name: "", email: '', message: '', send: false })
+      }, 8000)).catch(err => console.log(err))
   }
+
+  // Submit Button
+  const [dot, setDot] = useState(".")
+
+  const submitButton = (
+    <div className='section-message-submit'>
+      <button>Submit</button>
+    </div>
+  )
+
+  const submittingButton = (
+    <div className='section-message-submitting'>
+      <button disabled>Submitting{dot}</button>
+    </div>
+  )
+
 
   // Confirmation Message
   const confirm = (
@@ -243,9 +271,7 @@ const Contacts = () => {
               />
               {warn.message && <div className='message-warning'>Enter your message</div>}
             </div>
-            <div className='section-message-submit'>
-              <button>Submit</button>
-            </div>
+            {submitHan ? submittingButton : submitButton}
             {message.send && confirm}
           </form>
         </div>
@@ -516,14 +542,31 @@ const ContactsWrapper = styled.section`
     line-height: 5.3125rem;
     font-family: Inter;
     border: none;
+    transition: 1s;
   } 
+
+  .section-message-submitting button {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 5.5rem;
+    background: #6C10C6;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 16px;
+    line-height: 5.3125rem;
+    font-family: Inter;
+    border: none;
+    transition: 1s;
+    opacity: 0.8;
+  }
 
   .map-iframe {
     z-index: 999;
     margin-left: 10rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25) inset;
     width: 35vw;
-    height: 69vh;
+    height: 65vh;
     min-width: 300px;
     min-height: 410px;
     max-width: 500px;
@@ -548,7 +591,7 @@ const ContactsWrapper = styled.section`
     margin-top: 1rem;
     visibility: hidden;
     animation-name:confirm;
-    animation-duration: 4s;
+    animation-duration: 8s;
     transition: 2s;
     margin-bottom: -6rem;
   }
@@ -599,7 +642,7 @@ const ContactsWrapper = styled.section`
     font-weight: 700;
     width: auto;
     height: auto;
-    font-size: 5.5rem;
+    font-size: 7rem;
     position: unset;
 }
 
@@ -609,7 +652,7 @@ const ContactsWrapper = styled.section`
     width: auto;
     height: auto;
     position: unset;
-    font-size: 3rem;
+    font-size: 3.8rem;
     line-height: 4rem;
     }
 
@@ -617,7 +660,7 @@ const ContactsWrapper = styled.section`
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     line-height: 39px;
     width: auto;
     height: 1rem;
@@ -641,7 +684,6 @@ const ContactsWrapper = styled.section`
     }
     .section-map {
       margin: 23vh 0 0 0;
-      
     }
 
     .section-message {
@@ -691,6 +733,32 @@ const ContactsWrapper = styled.section`
     @media (max-height: 600px) {
       .section-map{
         margin-top: 40vh;
+      }
+    }
+
+    @media (max-width:464px){
+      .hero-heading {
+        font-size: 5.5rem;
+      }
+
+      .hero-tag {
+        font-size: 3rem;
+      }
+
+      .hero-bottom {
+        font-size: 2.5rem;
+      }
+    }
+    @media (max-width:350px){
+      .hero-heading {
+        font-size: 4.5rem;
+      }
+      .hero-tag {
+        font-size: 2.5rem;
+      }
+
+      .hero-bottom {
+        font-size: 2rem;
       }
     }
 `;
