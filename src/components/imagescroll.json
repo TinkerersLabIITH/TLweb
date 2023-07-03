@@ -9,22 +9,22 @@
         {
           "id": 2,
           "title": "Adventure",
-          "imageUrl": "./imagescroll/Imagescroll1.png"
+          "imageUrl": "./imagescroll/Imagescroll2.png"
         },
         {
           "id": 3,
           "title": "Events",
-          "imageUrl": "./imagescroll/Imagescroll1.png"
+          "imageUrl": "./imagescroll/Imagescroll4.png"
         },
         {
           "id": 4,
           "title": "Discovery",
-          "imageUrl": "./imagescroll/Imagescroll1.png"
+          "imageUrl": "./imagescroll/Imagescroll5.png"
         },
         {
           "id": 5,
           "title": "Sports",
-          "imageUrl": "./imagescroll/Imagescroll1.png"
+          "imageUrl": "./imagescroll/Imagescroll3.png"
         }
       ]
     }
