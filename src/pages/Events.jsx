@@ -87,7 +87,7 @@ const Events = () => {
       <div className="image">
       <div className='Effect' style={divStyle}>
       <div className='Content'>
-             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+             <p>PRO and Events of Tinkerers’ Lab is the face of our lab. It handles relations with contingents and clubs across the country along with some of the finest professors and incubators to go along with. The PRO end of the lab will target to collaborate with such bodies and other companies this year to set up mini R&D for such bodies in the lab. The lab will also deal with clubs inside the college which will be a fantastic opportunity to interact with Alumni and Seniors. </p>
           </div>
           </div>
           <div className="Left-Img">
@@ -100,7 +100,7 @@ const Events = () => {
       <div className="image">
       <div className='Effect' style={EP2Image}>
       <div className='Content'>
-             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+             <p>PRO and Events of Tinkerers’ Lab is the face of our lab. It handles relations with contingents and clubs across the country along with some of the finest professors and incubators to go along with. The PRO end of the lab will target to collaborate with such bodies and other companies this year to set up mini R&D for such bodies in the lab. The lab will also deal with clubs inside the college which will be a fantastic opportunity to interact with Alumni and Seniors. </p>
           </div>
           </div>
           <div className='Right-Img'>
@@ -113,7 +113,7 @@ const Events = () => {
       <div className="image">
       <div className='Effect' style={EP1Image}>
       <div className='Content'>
-             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+             <p>PRO and Events of Tinkerers’ Lab is the face of our lab. It handles relations with contingents and clubs across the country along with some of the finest professors and incubators to go along with. The PRO end of the lab will target to collaborate with such bodies and other companies this year to set up mini R&D for such bodies in the lab. The lab will also deal with clubs inside the college which will be a fantastic opportunity to interact with Alumni and Seniors. </p>
           </div>
           </div>
           <div className="Left-Img">
@@ -126,7 +126,7 @@ const Events = () => {
       <div className="image">
       <div className='Effect' style={TNightIMG}>
       <div className='Content'>
-             <p>ilwauefhwaiufhiuhfiuhihiu</p>
+             <p>PRO and Events of Tinkerers’ Lab is the face of our lab. It handles relations with contingents and clubs across the country along with some of the finest professors and incubators to go along with. The PRO end of the lab will target to collaborate with such bodies and other companies this year to set up mini R&D for such bodies in the lab. The lab will also deal with clubs inside the college which will be a fantastic opportunity to interact with Alumni and Seniors.</p>
           </div>
           </div>
           <div className='Right-Img'>
@@ -773,7 +773,7 @@ background: #6C10C6;
   transition: opacity 0.5s ease;
 }
 .Effect:before {
-  background: rgba(104, 50, 172, 0.6); /* Replace with your desired light purple color */
+  background: rgba(104, 50, 172, 0.6); 
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, 10, 0) translateY(100%);
@@ -805,9 +805,9 @@ background: #6C10C6;
   z-index: 10;
   text-align: center;
   margin: 0 1.618em;
-  top: 50%; /* Adjust the vertical position to center the content */
+  top: 50%; 
   opacity: 0;
-  color: white; /* Change the color to purple */
+  color: white; 
   font-size: 20px;
 }
 @media (max-width: 1000px) {
