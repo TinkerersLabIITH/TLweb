@@ -36,7 +36,7 @@ const Home = () => {
               transition={{ duration: 1 }}
               className="hero-heading"
             >
-              Tinkerers’ Laboratory
+              Tinkerers' Laboratory
             </motion.div>
             <div className="hero-tag">IIT Hyderabad</div>
             <div className="hero-bottom">
@@ -174,6 +174,7 @@ const Homestyled = styled.section`
     padding: 0rem 15vw;
     margin-bottom: 15vh;
   }
+
   #aims2,
   #aims {
     width: 100vw;
