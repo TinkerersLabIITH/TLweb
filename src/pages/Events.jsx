@@ -325,6 +325,7 @@ const EventWrapper = styled.section`
   
     .flex-item {
       width: 100%;
+      left:20%;
     }
   
     .Right-Img,
@@ -395,6 +396,62 @@ const EventWrapper = styled.section`
       left:-4%;
     } 
 
+  }
+  @media (max-width: 320px){
+    
+    .decoration-2,
+    .decoration-3{
+      width:95%;
+      height:100px;
+      top:7%;
+      left:3%;
+    }
+    .decoration,
+    .decoration-4{
+      width:80%;
+      height:100px;
+      top:7%;
+      left:5%;
+    }
+    .image-name{
+      font-size: 32px;
+      padding-top: 4%;
+      padding-left:15%;
+      width:80%;
+      height:100px;
+      top:2px;
+      left:4%;
+    }
+    .image-name-3{
+      font-size: 32px;
+      padding-top: 4.5%;
+      padding-left:04%;
+      width:95%;
+      left:2.5%;
+      height:100px;
+      top:2px;
+    }
+    .image-name-4 {
+      font-size: 32px;
+      padding-top: 4.5%;
+      padding-left:15%;
+      width:80%;
+      left:5%;
+      height:100px;
+      top:2px;
+    }
+    .image-name-2{
+      font-size: 30px;
+      padding-top: 4%;
+      padding-left:4%;
+      width:95%;
+      left:2.5%;
+      top:2px;
+      height:100px;
+    }
+    .Effect{
+      left:20%;
+    }
   }
   
   
