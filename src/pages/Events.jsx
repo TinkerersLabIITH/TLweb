@@ -294,7 +294,7 @@ const EventWrapper = styled.section`
   aspect-ratio: 3.96;
   position:absolute;
   bottom:35%;
-  right:1%;
+  right:4%;
   }
   .decoration-3{
     width: 120%;
@@ -608,7 +608,7 @@ background: #6C10C6;
 position: absolute;
 width: 12px;
 height: 12px;
-left: 707px;
+left: 507px;
 top: 3480px;
 
 background: #6C10C6;
@@ -619,7 +619,7 @@ position: absolute;
 width: 12px;
 height: 12px;
 left: 707px;
-top: 3480px;
+top: 3180px;
 
 background: #6C10C6;
 border-radius:50%;
@@ -628,7 +628,7 @@ border-radius:50%;
 position: absolute;
 width: 20px;
 height: 20px;
-left: 63px;
+left: 103px;
 top: 3825px;
 
 background: #6C10C6;
@@ -640,7 +640,7 @@ border-radius:50%;
   width: 12px;
   height: 12px;
   left: 499px;
-  top: 4496px;
+  top: 3996px;
   border-radius:50%;
   background: #6C10C6;
   
@@ -651,7 +651,7 @@ position: absolute;
 width: 20px;
 height: 20px;
 left: 561px;
-top: 4543px;
+top: 4043px;
 border-radius:50%;
 background: #6C10C6;
 
