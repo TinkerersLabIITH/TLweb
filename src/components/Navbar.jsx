@@ -22,22 +22,22 @@ const Navbar = () => {
       <NavMenu showMenu={showMenu} className={showMenu ? "active" : ""}>
         <NavList>
           <NavItem>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/team">Team</NavLink>
+            <NavLink to="/team" onClick={toggleMenu}>Team</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink to="/events" onClick={toggleMenu}>Events</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/inventory">Inventory</NavLink>
+            <NavLink to="/inventory" onClick={toggleMenu}>Inventory</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/projects">Projects</NavLink>
+            <NavLink to="/projects" onClick={toggleMenu}>Projects</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/contacts">Contacts</NavLink>
+            <NavLink to="/contacts" onClick={toggleMenu}>Contacts</NavLink>
           </NavItem>
         </NavList>
       </NavMenu>
