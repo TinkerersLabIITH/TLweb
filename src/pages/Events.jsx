@@ -161,7 +161,6 @@ const EventWrapper = styled.section`
     align-items: center;
     padding:1%;
     gap:25%;
-   
   }
 
   .flex-item {
@@ -169,6 +168,15 @@ const EventWrapper = styled.section`
     text-align: center;
     align-items: center;
     width:75%;
+    animation: fade-in 2.5s ease-in;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .Right-Img {
