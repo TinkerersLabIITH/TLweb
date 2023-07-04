@@ -159,7 +159,7 @@ const Homestyled = styled.section`
     text-align: center;
 
     color: #001824;
-    padding: 0rem 15vw;
+    padding: 0rem 5vw;
     margin-bottom: 15vh;
   }
 

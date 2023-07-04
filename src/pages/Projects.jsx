@@ -1,7 +1,8 @@
 import React from "react";
 import WordAnimation from "../components/homeanimate";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
+import { blue } from "@mui/material/colors";
 
 const words = ["Think", "Tinker", "Transform"];
 const interval = 200; // Delay between each letter
@@ -24,7 +25,7 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="hero-heading"
             >
-              Tinkerers' Laboratory
+              Projects
             </motion.div>
             <h3 className="hero-tag">Tinkerers’ Lab IITH</h3>
             <h4 className="hero-bottom">
@@ -49,22 +50,124 @@ const Projects = () => {
             </picture>
           </div>
         </div>
-        <div className="collab-form">
-          <h3>Collab with us</h3>
-          <motion.button
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
-            className="btn"
-          >
-            Collab
-          </motion.button>
+        <div className="row" id="collab-form">
+          <h3 style={{ fontWeight: 500, color: "black" }}>
+            Projects Available
+          </h3>
+          <div className="col-lg-4 col-md-6">
+            <motion.div whileHover={{ scale: 1.1 }} className="cont">
+              <div className="box">
+                <img src="./images/mlp.png" alt="Aim1" />
+              </div>
+              <div className="content">
+                <div className="heading">ML Project</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  <div>
+                    Click on the Below Link to apply for a Machine Learning
+                    Project
+                  </div>
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <motion.a
+                      style={{
+                        fontSize: "22px",
+                        fontWeight: 550,
+                        color: "#6c10c6",
+                      }}
+                      href=""
+                    >
+                      Apply
+                    </motion.a>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <motion.div whileHover={{ scale: 1.1 }} className="cont">
+              <div className="box">
+                <img src="./images/swp.png" alt="Aim1" />
+              </div>
+              <div className="content">
+                <div className="heading">Software Project</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  <div>
+                    Click on the Below Link to apply for a Software Project
+                  </div>
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <motion.a
+                      style={{
+                        fontSize: "22px",
+                        fontWeight: 550,
+                        color: "#6c10c6",
+                      }}
+                      href=""
+                    >
+                      Apply
+                    </motion.a>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <motion.div whileHover={{ scale: 1.1 }} className="cont">
+              <div className="box">
+                <img src="./images/otp.png" alt="Aim1" />
+              </div>
+              <div className="content">
+                <div className="heading">Others</div>
+                <div className="line"></div>
+                <div className="desp2">
+                  <div>
+                    {" "}
+                    Click on the Below Link to apply for Other type of Projects
+                  </div>
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                  >
+                    <motion.a
+                      style={{
+                        fontSize: "22px",
+                        fontWeight: 550,
+                        color: "#6c10c6",
+                      }}
+                      href=""
+                    >
+                      Apply
+                    </motion.a>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-        <div className="wip">
-          <h2>Work in Progress</h2>
-          <picture>
-            <img src="./images/wip1.png" alt="image" className="hero-img" />
-          </picture>
-        </div>
+        <h3
+          style={{
+            fontSize: "30px",
+            fontWeight: 500,
+            paddingTop: "70px",
+            color: "black",
+          }}
+        >
+          If you have any innovative ideas and want to combine with TL, please
+          fill the below form
+        </h3>
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="btn"
+        >
+          Apply
+        </motion.button>
       </div>
     </ProjectWrapper>
   );
@@ -73,9 +176,93 @@ const Projects = () => {
 export default Projects;
 
 const ProjectWrapper = styled.section`
+  padding: 9rem 0;
+  .col-lg-4,
+  .col-md-6 {
+    padding-top: 20px;
+  }
+  .box {
+    background: #eddaff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 95px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .heading {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #6c10c6;
+    padding-top: 4rem;
+  }
+  .line {
+    margin: 2.5rem 5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .desp2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #001824;
+    padding: 0rem 5vw;
+  }
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 15vh;
+  }
+  .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  #collab-form {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: relative;
+  }
+
+  .content {
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 39px;
+    margin-top: -3.5rem;
+    z-index: 1;
+    padding-bottom: 30px;
+  }
+  .col-xl {
+    text-align: center;
+  }
   .btn {
+    margin-top: 50px;
     width: 200px;
-    height: 8vh;
+    height: 7vh;
     a {
       color: #fff;
     }
@@ -92,32 +279,6 @@ const ProjectWrapper = styled.section`
     text-align: center;
 
     color: #ffffff;
-  }
-
-  .collab-form h3 {
-    color: black;
-    padding-bottom: 1rem;
-  }
-
-  padding: 9rem 0;
-  .col-xl {
-    text-align: center;
-  }
-  .wip {
-    padding-top: 9rem;
-  }
-  .wip .hero-img {
-    width: 10rem;
-    animation: rotation 10s infinite linear;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
   }
   .circle1 {
     position: absolute;
