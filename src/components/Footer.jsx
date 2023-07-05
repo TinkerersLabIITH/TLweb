@@ -4,6 +4,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { NavLink } from "react-router-dom";
 import WordAnimation from "../components/homeanimate";
+import { motion } from "framer-motion";
 
 const words = ["hink", "inker", "ransform"];
 const interval = 300; // Delay between each letter
@@ -52,7 +53,12 @@ const Footer = () => {
             <div className="accounts">
               <picture>
                 <NavLink to="https://www.facebook.com/tl.iith/" target="_blank">
-                  <img src="./images/img1.svg" alt="facebook" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    src="./images/img1.svg"
+                    alt="facebook"
+                  />
                 </NavLink>
               </picture>
               <picture>
@@ -60,20 +66,35 @@ const Footer = () => {
                   to="https://www.instagram.com/tinkererslab_iith"
                   target="_blank"
                 >
-                  <img src="./images/img5.svg" alt="instagram" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    src="./images/img5.svg"
+                    alt="instagram"
+                  />
                 </NavLink>
               </picture>
               <picture>
                 <NavLink
-                  to="https://www.linkedin.com/in/tinkerers-lab-iith/"
+                  to="https://www.linkedin.com/company/tinkerers-lab-iith/mycompany/"
                   target="_blank"
                 >
-                  <img src="./images/img2.svg" alt="linkedin" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    src="./images/img2.svg"
+                    alt="linkedin"
+                  />
                 </NavLink>
               </picture>
               <picture>
                 <NavLink to="https://discord.gg/cZFaRjyw" target="_blank">
-                  <img src="./images/img4.svg" alt="discord" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    src="./images/img4.svg"
+                    alt="discord"
+                  />
                 </NavLink>
               </picture>
               <picture>
@@ -81,7 +102,12 @@ const Footer = () => {
                   to="https://github.com/TinkerersLabIITH"
                   target="_blank"
                 >
-                  <img src="./images/img3.svg" alt="github" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8 }}
+                    src="./images/img3.svg"
+                    alt="github"
+                  />
                 </NavLink>
               </picture>
             </div>

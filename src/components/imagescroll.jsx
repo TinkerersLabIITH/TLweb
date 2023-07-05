@@ -9,20 +9,24 @@ const images = [
     thumbnail: "./imagescroll/Imagescroll1.png",
   },
   {
-    original: "./imagescroll/Imagescroll3.png",
-    thumbnail: "./imagescroll/Imagescroll3.png",
+    original: "./imagescroll/imagescroll3.png",
+    thumbnail: "./imagescroll/imagescroll3.png",
   },
   {
-    original: "./imagescroll/Imagescroll4.png",
-    thumbnail: "./imagescroll/Imagescroll4.png",
+    original: "./imagescroll/imagescroll4.png",
+    thumbnail: "./imagescroll/imagescroll4.png",
   },
   {
-    original: "./imagescroll/Imagescroll5.png",
-    thumbnail: "./imagescroll/Imagescroll5.png",
+    original: "./imagescroll/imagescroll5.png",
+    thumbnail: "./imagescroll/imagescroll5.png",
   },
   {
-    original: "./imagescroll/Imagescroll2.png",
-    thumbnail: "./imagescroll/Imagescroll2.png",
+    original: "./imagescroll/imagescroll6.png",
+    thumbnail: "./imagescroll/imagescroll6.png",
+  },
+  {
+    original: "./imagescroll/imagescroll2.png",
+    thumbnail: "./imagescroll/imagescroll2.png",
   },
 ];
 

@@ -1,8 +1,7 @@
 import React from "react";
 import WordAnimation from "../components/homeanimate";
 import styled from "styled-components";
-import { color, motion } from "framer-motion";
-import { blue } from "@mui/material/colors";
+import { motion } from "framer-motion";
 
 const words = ["Think", "Tinker", "Transform"];
 const interval = 200; // Delay between each letter
