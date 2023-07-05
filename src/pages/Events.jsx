@@ -422,8 +422,8 @@ const EventWrapper = styled.section`
       padding-top: 0%;
       padding-left:6%;
       width:45vw;
-      height:10vh;
-      top:-4vh;
+      height:7vh;
+      top:-1.5vh;
       left:0%;
     }
     .image-name-2,
@@ -432,8 +432,8 @@ const EventWrapper = styled.section`
       width:53vw;
       padding-left:5%;
       left:4%;
-      top:-4vh;
-      height:10vh;
+      top:-1.5vh;
+      height:7vh;
       padding-top: 0%;
     }
     .image-name-4 {
@@ -441,10 +441,19 @@ const EventWrapper = styled.section`
       padding-top: 0%;
       padding-left:6%;
       width:45vw;
-      height:10vh;
-      top:-4vh;
+      height:7vh;
+      top:-1.5vh;
       left:10%;
     }
+
+    .decoration,
+    .decoration-2,
+    .decoration-3,
+    .decoration-4
+    {
+      display:none;
+    }
+  }
 
     .decoration,
     .decoration-2,
